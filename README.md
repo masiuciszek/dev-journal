@@ -1,18 +1,20 @@
 
 
 
+
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://cdn2.iconfinder.com/data/icons/heroes/128/superhero_batman_hero_comic-512.png" width="60" />
-    <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <img alt="superhero" src="https://cdn2.iconfinder.com/data/icons/heroes/128/superhero_batman_hero_comic-512.png" width="60" />
   </a>
 </p>
 <h1 align="center">
   Marcellable blog 2.0
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This si my new version of my blog, I wanted to have another version of my blog. I wanted to rewtite it in Typescript and using MDX instead of regular markdown files. another feature is that I will us tags to easier find blog posts.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
@@ -101,6 +103,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+
+
+
+
+
 
 
 
