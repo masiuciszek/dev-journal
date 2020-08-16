@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { theme } from "../../utils/theme";
+import SiteProvider from "../../context/site/Site.provider";
+import { theme as themeLight, themeDark } from "../../utils/theme";
 import SEO from "../Seo";
 import Nav from "../styled/nav";
 
@@ -82,12 +83,14 @@ const Main = styled.main``;
 
 const Layout: React.FC<Props> = ({ children, title }) => {
   return (
-    <ThemeProvider theme={theme}>
-      <SEO />
-      <Nav />
-      <GlobalStyles />
-      <Main>{children}</Main>
-    </ThemeProvider>
+    <SiteProvider>
+      <ThemeProvider theme={themeLight}>
+        <SEO title={title} />
+        <GlobalStyles />
+        <Nav />
+        <Main>{children}</Main>
+      </ThemeProvider>
+    </SiteProvider>
   );
 };
 export default Layout;

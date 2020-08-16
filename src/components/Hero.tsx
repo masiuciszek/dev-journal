@@ -19,7 +19,6 @@ interface HeroQueryType {
 const Wrapper = styled.section`
   ${handleFlex("row", "space-between", "center")};
   height: 100%;
-  border: 2px solid #fff;
   width: 80%;
   margin: 0 auto;
   ${below.medium`

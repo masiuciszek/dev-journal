@@ -1,3 +1,5 @@
+import React from "react";
+
 // ES5 way
 // exports.onClientEntry = () => {
 // ES6 way
