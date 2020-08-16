@@ -7,6 +7,20 @@ module.exports = {
     url: "https://www.marcellable.com", // No trailing slash allowed!
     image: "/images/plane.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@CiszekMarcell",
+    sitePaths: [
+      {
+        name: "about",
+        path: "/about",
+      },
+      {
+        name: "posts",
+        path: "/posts",
+      },
+      {
+        name: "contact",
+        path: "/contact",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
