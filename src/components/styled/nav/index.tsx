@@ -1,10 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { above, below, handleFlex } from "../../../utils/helpers";
 import NavList from "./Nav.list";
 import { FixedObject } from "gatsby-image";
 import Img from "gatsby-image";
+import ModalMenu from "./Modal.menu";
+import useToggle from "../../../hooks/useToggle";
 
 interface Props {
   className?: string;
@@ -46,15 +48,20 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
 
   const [dark, light] = edges;
 
+  const [on, toggleOn] = useToggle();
+
   return (
     <nav className={className}>
-      <div className="logo">
-        <h3>{title}</h3>
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <h3>{title}</h3>
+        </div>
+      </Link>
       <NavList onSitePaths={sitePaths} />
-      <div className="menuImg">
-        <Img fixed={light.node.childImageSharp.fixed} />
+      <div className="menuImg" onClick={toggleOn}>
+        <Img fixed={dark.node.childImageSharp.fixed} />
       </div>
+      <ModalMenu on={on} onSitePaths={sitePaths} />
     </nav>
   );
 };
@@ -95,6 +102,7 @@ export default styled(Nav)`
     top: 1em;
     right: 2em;
     cursor: pointer;
+    z-index: 6;
   }
   .logo {
     ${handleFlex("row", "flex-start", "center")};

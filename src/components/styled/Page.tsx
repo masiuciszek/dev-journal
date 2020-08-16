@@ -1,3 +1,11 @@
 import styled from "styled-components";
+import { handleFlex } from "../../utils/helpers";
 
-export const Page = styled.div``;
+interface PageProps {
+  height?: string;
+}
+
+export const Page = styled.div<PageProps>`
+  ${handleFlex("row", "space-between", "center")};
+  height: ${({ height }) => (height ? height : "100%")};
+`;
