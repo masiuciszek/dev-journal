@@ -6,10 +6,13 @@ import Title from "../components/Title";
 const IndexPage = () => (
   <Layout>
     <Hero className="Home-Hero">
-      <Title className="Home-Title" title="My Story" />
-      <div>
-        <h1>some other text</h1>
-      </div>
+      <Title
+        className="Home-Title"
+        title="Hi I am Marcell"
+        text="This is my school documentation from my first internship"
+        cta
+        ctaText="posts"
+      />
     </Hero>
   </Layout>
 );

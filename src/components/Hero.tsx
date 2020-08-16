@@ -2,7 +2,7 @@ import * as React from "react";
 import BackgroundImage, { IFluidObject } from "gatsby-background-image";
 import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
-import { handleFlex } from "../utils/helpers";
+import { below, handleFlex } from "../utils/helpers";
 
 interface Props {
   className: string;
@@ -19,6 +19,13 @@ interface HeroQueryType {
 const Wrapper = styled.section`
   ${handleFlex("row", "space-between", "center")};
   height: 100%;
+  border: 2px solid #fff;
+  width: 80%;
+  margin: 0 auto;
+  ${below.medium`
+    ${handleFlex("column", "center", "center")};
+    width: 100%;
+  `}
 `;
 
 const Hero: React.FC<Props> = ({ children, className }) => {

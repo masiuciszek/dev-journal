@@ -31,19 +31,23 @@ const MenuStyles = styled(animated.section)`
     text-transform: capitalize;
     transition: ${props => props.theme.transition.mainTransition};
     position: relative;
+    color: ${({ theme }) => theme.colors.background};
+    text-shadow: 1px 1px 1px ${({ theme }) => theme.colors.text};
     &::after {
       content: "";
-      background: ${({ theme }) => theme.colors.text};
+      background: ${({ theme }) => theme.colors.background};
       width: 1%;
       position: absolute;
       bottom: 0;
       left: 0;
       transition: ${props => props.theme.transition.mainTransition};
+      border-radius: 4px;
     }
     &:hover {
       &::after {
+        ${({ theme }) => theme.shadow.elevations[3]};
         width: 100%;
-        padding: 0.1em;
+        padding: 0.1rem;
       }
     }
   }
