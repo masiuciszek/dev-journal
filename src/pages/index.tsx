@@ -1,6 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
+import Layout from "../components/layout";
 
-const IndexPage = () => <h1>hello</h1>;
+const IndexPage = () => (
+  <Layout>
+    <h1>Home</h1>
+  </Layout>
+);
 
 export default IndexPage;
