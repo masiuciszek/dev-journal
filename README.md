@@ -1,117 +1,56 @@
-
-
-
-
-
-
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="superhero" src="https://cdn2.iconfinder.com/data/icons/heroes/128/superhero_batman_hero_comic-512.png" width="60" />
+  <a href="https://www.marcellable.com">
+
+    <img alt="superhero" src="./travel.png" width="60" />
+
   </a>
 </p>
 <h1 align="center">
-  Marcellable blog 2.0
+  My Internship Documentation
 </h1>
 
-This si my new version of my blog, I wanted to have another version of my blog. I wanted to rewtite it in Typescript and using MDX instead of regular markdown files. another feature is that I will us tags to easier find blog posts.
+## Table of Contents
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+* [About](#about)
+* [Getting Started](#getting_started)
+* [Usage](#usage)
+* [Contributing](../CONTRIBUTING.md)
 
-## 🚀 Quick start
+## About <a name = "about"></a>
 
-1.  **Create a Gatsby site.**
+This is my Documentation for my biggest school project. My Internship at [EtraveliGroup](https://www.etraveligroup.com/).
+I will document every day on , what I do and how it went for every day. Of course there be perhaps some steps that I will not document, that is between me and *Etraveli*. Hope You think the story would be intreating and you could take something from this as well.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## Getting Started <a name = "getting_started"></a>
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-1.  **Start developing.**
+### Prerequisites
 
-    Navigate into your new site’s directory and start it up.
+What things you need to install the software and how to install them.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+``` 
+Give examples
+```
 
-1.  **Open the source code and start editing!**
+### Installing
 
-    Your site is now running at `http://localhost:8000`!
+A step by step series of examples that tell you how to get a development env running.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Say what the step will be
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+``` 
+Give the example
+```
 
-## 🧐 What's inside?
+And repeat
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+``` 
+until finished
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+End with an example of getting some data out of the system or using it for a little demo.
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+## Usage <a name = "usage"></a>
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
-
-
-
-
-
-
-
-
-
-
-
-
+Add notes about how to use the system.
