@@ -1,8 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import SiteProvider from "../../context/site/Site.provider";
-import useLocalStorage from "../../hooks/useLocalStorage";
+import { useSiteState } from "../../context/site/Site.provider";
 import { theme as themeLight, themeDark } from "../../utils/theme";
 import SEO from "../Seo";
 import Nav from "../styled/nav";
@@ -98,15 +97,16 @@ const Layout: React.FC<Props> = ({ children, title }) => {
     }
   }, [localTheme, isDark]);
 
+  // TODO: CHECK IT OUT
+  const a = useSiteState();
+  console.log(a.theme);
   return (
-    <SiteProvider>
-      <ThemeProvider theme={isDark ? themeDark : themeLight}>
-        <SEO title={title} />
-        <GlobalStyles />
-        <Nav />
-        <Main>{children}</Main>
-      </ThemeProvider>
-    </SiteProvider>
+    <ThemeProvider theme={isDark ? themeDark : themeLight}>
+      <SEO title={title} />
+      <GlobalStyles />
+      <Nav />
+      <Main>{children}</Main>
+    </ThemeProvider>
   );
 };
 export default Layout;
