@@ -84,17 +84,19 @@ const Main = styled.main``;
 
 const Layout: React.FC<Props> = ({ children, title }) => {
   const [isDark, setIsDark] = React.useState(false);
+
+  const localTheme =
+    typeof window.localStorage !== "undefined"
+      ? window.localStorage.theme
+      : null;
+
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window.localStorage.theme === "DARK") {
-        // console.log(window.localStorage.theme);
-        // console.log(typeof window.localStorage.theme);
-        setIsDark(true);
-      } else {
-        setIsDark(false);
-      }
+    if (localTheme === "DARK") {
+      setIsDark(true);
+    } else if (localTheme === "LIGHT") {
+      setIsDark(false);
     }
-  }, [isDark]);
+  }, [localTheme, isDark]);
 
   return (
     <SiteProvider>

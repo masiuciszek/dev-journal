@@ -53,6 +53,12 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
 
   const [on, toggleOn] = useToggle();
 
+  console.log(themeOption);
+
+  React.useEffect(() => {
+    setTheme(themeOption);
+  }, [themeOption]);
+
   return (
     <nav className={className}>
       <Link to="/">

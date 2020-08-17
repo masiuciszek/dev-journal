@@ -10,7 +10,7 @@ function useLocalStorage(
   initialValue: string
 ): UseLocalStorageReturnType {
   const item =
-    typeof window === "object" ? window.localStorage.getItem(key) : null;
+    typeof window !== "undefined" ? window.localStorage.getItem(key) : null;
   const [value, setValue] = React.useState<string>(item || initialValue);
 
   React.useEffect(() => {
