@@ -7,7 +7,6 @@ import { FixedObject } from "gatsby-image";
 import Img from "gatsby-image";
 import ModalMenu from "./Modal.menu";
 import useToggle from "../../../hooks/useToggle";
-import { useSiteState } from "../../../context/site/Site.provider";
 import useTheme from "../../../hooks/useTheme";
 
 interface Props {
@@ -50,13 +49,9 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
 
   const [themeOption, setTheme] = useTheme("theme", "LIGHT");
 
-  const { theme } = useSiteState();
-
   const [dark, light] = edges;
 
   const [on, toggleOn] = useToggle();
-
-  React.useEffect(() => {}, [theme]);
 
   return (
     <nav className={className}>
@@ -69,7 +64,7 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
       <div className="menuImg" onClick={toggleOn}>
         <Img
           fixed={
-            theme === "LIGHT"
+            themeOption === "LIGHT"
               ? light.node.childImageSharp.fixed
               : dark.node.childImageSharp.fixed
           }
@@ -77,7 +72,7 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
       </div>
       <ModalMenu on={on} onSitePaths={sitePaths} />
       <div className="menuToggle">
-        {theme === "LIGHT" ? (
+        {themeOption === "LIGHT" ? (
           <>
             <span className="dark" onClick={() => setTheme("DARK")}>
               Dark

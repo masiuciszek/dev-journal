@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import SiteProvider from "../../context/site/Site.provider";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import { theme as themeLight, themeDark } from "../../utils/theme";
 import SEO from "../Seo";
 import Nav from "../styled/nav";
@@ -82,9 +83,22 @@ const GlobalStyles = createGlobalStyle`
 const Main = styled.main``;
 
 const Layout: React.FC<Props> = ({ children, title }) => {
+  const [isDark, setIsDark] = React.useState(false);
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.localStorage.theme === "DARK") {
+        // console.log(window.localStorage.theme);
+        // console.log(typeof window.localStorage.theme);
+        setIsDark(true);
+      } else {
+        setIsDark(false);
+      }
+    }
+  }, [isDark]);
+
   return (
     <SiteProvider>
-      <ThemeProvider theme={themeLight}>
+      <ThemeProvider theme={isDark ? themeDark : themeLight}>
         <SEO title={title} />
         <GlobalStyles />
         <Nav />

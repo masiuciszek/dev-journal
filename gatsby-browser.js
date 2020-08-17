@@ -1,5 +1,5 @@
 import React from "react";
-
+// import Layout from "./src/components/layout";
 // ES5 way
 // exports.onClientEntry = () => {
 // ES6 way
@@ -10,3 +10,5 @@ export const onClientEntry = () => {
     console.log(`# IntersectionObserver is polyfilled!`);
   }
 };
+
+// export const wrapRootElement = ({ element }) => <Layout>{element}</Layout>;
