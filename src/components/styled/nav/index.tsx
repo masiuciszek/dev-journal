@@ -48,19 +48,21 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
     menuIcons: { edges },
   } = useStaticQuery<NavQueryProps>(navQuery);
 
-  const [themeOption, setTheme] = useTheme("theme", "LIGHT");
+  const [appTheme, setTheme] = useTheme("theme", "LIGHT");
 
   const [dark, light] = edges;
 
   const [on, toggleOn] = useToggle();
 
-  console.log(themeOption);
-
-  React.useEffect(() => {
-    setTheme(themeOption);
-  }, [themeOption]);
-
   const { theme } = useSiteState();
+
+  const handleSetTheme = () => {
+    if (appTheme === "DARK") {
+      setTheme("LIGHT");
+    } else if (appTheme === "LIGHT") {
+      setTheme("DARK");
+    }
+  };
 
   return (
     <nav className={className}>
@@ -81,20 +83,32 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
       </div>
       <ModalMenu on={on} onSitePaths={sitePaths} />
       <div className="menuToggle">
-        {themeOption === "LIGHT" ? (
+        {theme === "LIGHT" ? (
           <>
             <span className="dark" onClick={() => setTheme("DARK")}>
-              Dark
+              🌑
             </span>
           </>
         ) : (
           <>
             <span className="light" onClick={() => setTheme("LIGHT")}>
-              Light
+              🌞
             </span>
           </>
         )}
       </div>
+      <label className="test-slider">
+        <span
+          onClick={handleSetTheme}
+          style={{
+            transform:
+              appTheme === "LIGHT" ? "translateX(8em)" : "translateX(0%)",
+          }}
+        >
+          {" "}
+          {theme === "DARK" ? "🌞" : "🌑"}{" "}
+        </span>
+      </label>
     </nav>
   );
 };
@@ -164,5 +178,34 @@ export default styled(Nav)`
 
   .menuToggle {
     cursor: pointer;
+    position: absolute;
+    top: 4rem;
+    right: 2.65rem;
+    ${above.medium`
+      top: 1rem;
+      right: 2rem;
+    `}
+  }
+
+  .test-slider {
+    border: 2px solid red;
+    width: 12em;
+    padding: 0.5rem;
+    position: absolute;
+    top: 10rem;
+    span {
+      transition: 300ms ease all;
+      background: #fff;
+      border-radius: 50%;
+      display: block;
+      /* padding: 1rem; */
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      ${handleFlex("row", "center", "center")};
+      cursor: pointer;
+      z-index: 5;
+      position: relative;
+    }
   }
 `;
