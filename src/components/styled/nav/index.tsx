@@ -9,6 +9,7 @@ import ModalMenu from "./Modal.menu";
 import useToggle from "../../../hooks/useToggle";
 import useTheme from "../../../hooks/useTheme";
 import { useSiteState } from "../../../context/site/Site.provider";
+import ThemeSlider from "./Theme.slider";
 
 interface Props {
   className?: string;
@@ -82,33 +83,11 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
         />
       </div>
       <ModalMenu on={on} onSitePaths={sitePaths} />
-      <div className="menuToggle">
-        {theme === "LIGHT" ? (
-          <>
-            <span className="dark" onClick={() => setTheme("DARK")}>
-              🌑
-            </span>
-          </>
-        ) : (
-          <>
-            <span className="light" onClick={() => setTheme("LIGHT")}>
-              🌞
-            </span>
-          </>
-        )}
-      </div>
-      <label className="test-slider">
-        <span
-          onClick={handleSetTheme}
-          style={{
-            transform:
-              appTheme === "LIGHT" ? "translateX(8em)" : "translateX(0%)",
-          }}
-        >
-          {" "}
-          {theme === "DARK" ? "🌞" : "🌑"}{" "}
-        </span>
-      </label>
+      <ThemeSlider
+        className="ThemeSlider"
+        onTheme={theme}
+        onHandleSetTheme={handleSetTheme}
+      />
     </nav>
   );
 };
@@ -175,37 +154,4 @@ export default styled(Nav)`
          display: none;
         }
   `}
-
-  .menuToggle {
-    cursor: pointer;
-    position: absolute;
-    top: 4rem;
-    right: 2.65rem;
-    ${above.medium`
-      top: 1rem;
-      right: 2rem;
-    `}
-  }
-
-  .test-slider {
-    border: 2px solid red;
-    width: 12em;
-    padding: 0.5rem;
-    position: absolute;
-    top: 10rem;
-    span {
-      transition: 300ms ease all;
-      background: #fff;
-      border-radius: 50%;
-      display: block;
-      /* padding: 1rem; */
-      width: 3rem;
-      height: 3rem;
-      text-align: center;
-      ${handleFlex("row", "center", "center")};
-      cursor: pointer;
-      z-index: 5;
-      position: relative;
-    }
-  }
 `;

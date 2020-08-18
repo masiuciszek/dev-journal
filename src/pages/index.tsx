@@ -12,7 +12,7 @@ const IndexPage = () => {
           <Title
             className="Home-Title"
             title="Hi I am Marcell"
-            text="This is my school documentation from my first internship"
+            text="This is my school documentation from my most important School project"
             cta
             ctaText="posts"
           />

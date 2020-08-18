@@ -31,7 +31,6 @@ export const theme: DefaultTheme = {
       "box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       "box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       "box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5)",
-      "box-shadow: none",
     ],
   },
   transition: {
@@ -72,7 +71,6 @@ export const themeDark: DefaultTheme = {
       "box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25)",
       "box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       "box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5)",
-      "box-shadow: none",
     ],
   },
   transition: {
