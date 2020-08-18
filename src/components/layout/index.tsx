@@ -79,29 +79,16 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-const Main = styled.main``;
+const Main = styled.main`
+  margin: 0 auto;
+`;
 
 const Layout: React.FC<Props> = ({ children, title }) => {
-  const [isDark, setIsDark] = React.useState(false);
-
-  const localTheme =
-    typeof window.localStorage !== "undefined"
-      ? window.localStorage.theme
-      : null;
-
-  React.useEffect(() => {
-    if (localTheme === "DARK") {
-      setIsDark(true);
-    } else if (localTheme === "LIGHT") {
-      setIsDark(false);
-    }
-  }, [localTheme, isDark]);
-
   // TODO: CHECK IT OUT
-  const a = useSiteState();
-  console.log(a.theme);
+  const { theme } = useSiteState();
+
   return (
-    <ThemeProvider theme={isDark ? themeDark : themeLight}>
+    <ThemeProvider theme={theme === "DARK" ? themeDark : themeLight}>
       <SEO title={title} />
       <GlobalStyles />
       <Nav />
@@ -110,3 +97,4 @@ const Layout: React.FC<Props> = ({ children, title }) => {
   );
 };
 export default Layout;
+// <ThemeProvider theme={isDark ? themeDark : themeLight}>
