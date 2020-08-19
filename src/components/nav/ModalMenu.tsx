@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import * as React from "react";
 import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
-import { handleFlex } from "../../../utils/helpers";
+import { handleFlex } from "../../utils/helpers";
 
 interface Path {
   name: string;

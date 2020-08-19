@@ -1,15 +1,15 @@
 import * as React from "react";
 import styled from "styled-components";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { above, below, handleFlex } from "../../../utils/helpers";
+import { above, below, handleFlex } from "../../utils/helpers";
 import NavList from "./Nav.list";
 import { FixedObject } from "gatsby-image";
 import Img from "gatsby-image";
-import ModalMenu from "./Modal.menu";
-import useToggle from "../../../hooks/useToggle";
-import useTheme from "../../../hooks/useTheme";
-import { useSiteState } from "../../../context/site/Site.provider";
-import ThemeSlider from "./Theme.slider";
+import ModalMenu from "./ModalMenu";
+import useToggle from "../../hooks/useToggle";
+import useTheme from "../../hooks/useTheme";
+import ThemeSlider from "./ThemeSlider";
+import { useSiteState } from "../../context/site/SiteProvider";
 
 interface Props {
   className?: string;

@@ -1,10 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { useSiteState } from "../../context/site/Site.provider";
+import { useSiteState } from "../../context/site/SiteProvider";
 import { theme as themeLight, themeDark } from "../../utils/theme";
 import SEO from "../Seo";
-import Nav from "../styled/nav";
+import Nav from "../nav";
 
 interface Props {
   title?: string;

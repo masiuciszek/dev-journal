@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Layout from "../components/layout";
 import Title from "../components/Title";
-import SiteProvider from "../context/site/Site.provider";
+import SiteProvider from "../context/site/SiteProvider";
 
 const IndexPage = () => {
   return (

@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { above, below, handleFlex } from "../../../utils/helpers";
+import { below, handleFlex } from "../../utils/helpers";
 
 interface Props {
   className: string;
@@ -37,8 +37,10 @@ export default styled(MenuSlider)`
   right: 2rem;
   padding: 0.1rem;
   background: ${({ theme }) => theme.colors.text};
-  ${({ theme }) => theme.shadow.elevations[7]};
+  ${({ theme }) => theme.shadow.elevations[5]};
+  border: 2px solid ${({ theme }) => theme.colors.button};
   span {
+    border: 2px solid ${({ theme }) => theme.colors.button};
     background: ${({ theme }) => theme.colors.background};
     transition: ${({ theme }) => theme.transition.mainTransition};
     border-radius: 50%;

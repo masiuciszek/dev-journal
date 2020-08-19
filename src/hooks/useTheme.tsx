@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useSiteDispatch } from "../context/site/Site.provider";
+import { useSiteDispatch } from "../context/site/SiteProvider";
 import useLocalStorage from "./useLocalStorage";
 
 type UseThemeReturnType = [

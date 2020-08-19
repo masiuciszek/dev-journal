@@ -2,7 +2,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import styled from "styled-components";
-import { above, handleFlex } from "../../../utils/helpers";
+import { above, handleFlex } from "../../utils/helpers";
 
 interface Path {
   name: string;
