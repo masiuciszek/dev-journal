@@ -1,7 +1,5 @@
 import * as React from "react";
 
-type Theme = "LIGHT" | "DARK";
-
 export interface SiteState {
   theme: Theme;
 }

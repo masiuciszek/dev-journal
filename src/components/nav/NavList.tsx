@@ -45,7 +45,7 @@ const StyledList = styled.ul<StyledListProps>`
     &:hover {
       background: ${props => props.theme.colors.button};
       color: #131313;
-      ${props => props.theme.shadow.elevations[2]};
+      box-shadow: ${props => props.theme.shadow.elevations[4]};
       &::after {
         width: 100%;
         padding: 0.1em;

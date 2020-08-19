@@ -37,8 +37,8 @@ export default styled(MenuSlider)`
   right: 2rem;
   padding: 0.1rem;
   background: ${({ theme }) => theme.colors.text};
-  ${({ theme }) => theme.shadow.elevations[5]};
   border: 2px solid ${({ theme }) => theme.colors.button};
+  box-shadow: ${({ theme }) => theme.shadow.elevations[5]};
   span {
     border: 2px solid ${({ theme }) => theme.colors.button};
     background: ${({ theme }) => theme.colors.background};
