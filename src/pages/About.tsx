@@ -1,10 +1,14 @@
 import React from "react";
+import Layout from "../components/layout";
+import SiteProvider from "../context/site/SiteProvider";
 
 const AboutPage = () => {
   return (
-    <div>
-      <h1>AboutPage</h1>
-    </div>
+    <SiteProvider>
+      <Layout>
+        <h1>AboutPage</h1>
+      </Layout>
+    </SiteProvider>
   );
 };
 
