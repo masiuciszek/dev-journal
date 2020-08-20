@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 
 import styled from "styled-components";
-import { handleFlex } from "../../utils/helpers";
+import { below, handleFlex } from "../../utils/helpers";
 
 interface Props {
   postData: {
@@ -13,15 +13,19 @@ interface Props {
 
 const PostStyles = styled.article`
   padding: 1rem 0;
+  border: 2px solid blue;
+  height: 100%;
+
   &:not(:first-child) {
     margin: 2rem 0;
   }
 `;
 
 const PostHeader = styled.div`
-  ${handleFlex("row", "flex-start", "center")};
-  position: relative;
-  height: 4em;
+  ${handleFlex("row", "space-between", "center")};
+  height: 8em;
+  border: 2px solid red;
+  width: 70%;
 
   strong,
   p {
@@ -37,25 +41,45 @@ const PostHeader = styled.div`
   p {
     flex: 1;
   }
+  position: relative;
 
   .tags {
     ${handleFlex("row", "space-between", "flex-start")};
+    position: absolute;
+    top: 5rem;
     text-align: center;
     width: 8em;
-    margin-left: auto;
+    margin-right: auto;
     box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
     border-radius: 4px;
     li {
       text-align: center;
       padding: 0 0.2em;
-      width: 100%;
-
       a {
         display: block;
         text-align: center;
       }
     }
   }
+
+  ${below.smallMedium`
+    ${handleFlex("column", "space-between", "flex-start")};
+    width: 100%;
+    .tags {
+      top: 0;
+      right: 1rem;
+    }
+  `}
+
+  ${below.small`
+    ${handleFlex("column", "center", "center")};
+    height: 100%;
+    .tags {
+      position: static;
+      top: ;
+      right: 0;
+    }
+  `}
 `;
 
 const Post = ({ postData }: Props) => {
