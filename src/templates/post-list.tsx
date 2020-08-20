@@ -9,7 +9,6 @@ import { Page } from "../components/styled/Page";
 interface Edges {
   node: {
     frontmatter: FrontMatter;
-    excerpt: string;
   };
 }
 
@@ -23,10 +22,24 @@ const PostList = styled.section`
   padding: 1rem;
   box-shadow: ${({ theme }) => theme.shadow.elevations[1]};
   height: 100%;
+
+  .navigation {
+  }
 `;
 
-const PostListTemplate: React.FC<PageProps<Posts>> = ({ data }) => {
+interface PageContextData {
+  limit: number;
+  skip: number;
+  numPages: number;
+  currentPage: number;
+}
+
+const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
+  data,
+  pageContext,
+}) => {
   const { edges } = data.POSTS;
+
   return (
     <SiteProvider>
       <Layout>
@@ -35,6 +48,7 @@ const PostListTemplate: React.FC<PageProps<Posts>> = ({ data }) => {
             {edges.map(({ node }) => (
               <Post key={node.frontmatter.date} postData={node} />
             ))}
+            <div className="navigation"></div>
           </PostList>
         </Page>
       </Layout>

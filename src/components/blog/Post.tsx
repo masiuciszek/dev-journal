@@ -7,26 +7,23 @@ import { below, handleFlex } from "../../utils/helpers";
 interface Props {
   postData: {
     frontmatter: FrontMatter;
-    excerpt: string;
   };
 }
 
 const PostStyles = styled.article`
   padding: 1rem 0;
-  border: 2px solid blue;
-  height: 100%;
+  width: 80%;
+  ${handleFlex("row", "flex-start", "flex-start")};
 
   &:not(:first-child) {
     margin: 2rem 0;
   }
+  position: relative;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.text};
 `;
 
-const PostHeader = styled.div`
-  ${handleFlex("row", "space-between", "center")};
-  height: 8em;
-  border: 2px solid red;
-  width: 70%;
-
+const PostHeader = styled(Link)`
+  ${handleFlex("column", "flex-start", "flex-start")};
   strong,
   p {
     margin: 0.5rem;
@@ -41,62 +38,44 @@ const PostHeader = styled.div`
   p {
     flex: 1;
   }
-  position: relative;
+`;
 
-  .tags {
-    ${handleFlex("row", "space-between", "flex-start")};
-    position: absolute;
-    top: 5rem;
-    text-align: center;
-    width: 8em;
-    margin-right: auto;
-    box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
+const Tags = styled.ul`
+  ${handleFlex("row", "space-between", "center")};
+  position: absolute;
+  right: 0;
+  top: 0;
+  li {
     border-radius: 4px;
-    li {
-      text-align: center;
-      padding: 0 0.2em;
-      a {
-        display: block;
-        text-align: center;
-      }
+    padding: 0 0.2em;
+    margin: 0 0.2em;
+    box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
+    a {
+      text-shadow: 1px 2px 2px ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme.colors.button};
+      display: block;
     }
   }
-
-  ${below.smallMedium`
-    ${handleFlex("column", "space-between", "flex-start")};
-    width: 100%;
-    .tags {
-      top: 0;
-      right: 1rem;
-    }
-  `}
-
   ${below.small`
-    ${handleFlex("column", "center", "center")};
-    height: 100%;
-    .tags {
-      position: static;
-      top: ;
-      right: 0;
-    }
+    margin-right: auto;
   `}
 `;
 
 const Post = ({ postData }: Props) => {
-  const { title, date, spoiler, tags } = postData.frontmatter;
+  const { title, date, spoiler, tags, path } = postData.frontmatter;
 
   return (
     <PostStyles>
-      <PostHeader>
+      <PostHeader to={`/posts${path}`}>
         <strong>postad at {date} </strong> <p>{spoiler}</p>
-        <ul className="tags">
-          {tags.map(tag => (
-            <li key={tag}>
-              <Link to={`/keyword/${tag}`}>{tag}</Link>
-            </li>
-          ))}
-        </ul>
       </PostHeader>
+      <Tags>
+        {tags.map(tag => (
+          <li key={tag}>
+            <Link to={`/keyword/${tag}`}>{tag}</Link>
+          </li>
+        ))}
+      </Tags>
     </PostStyles>
   );
 };
