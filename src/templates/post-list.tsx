@@ -39,7 +39,7 @@ const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
   pageContext,
 }) => {
   const { edges } = data.POSTS;
-
+  const { currentPage, numPages } = pageContext;
   return (
     <SiteProvider>
       <Layout>

@@ -41,9 +41,13 @@
     "typescript": "^3.9.6"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "typescript",
+    "graphql",
+    "react",
+    "typescript"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
