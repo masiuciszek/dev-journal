@@ -37,7 +37,7 @@ exports.createPages = async ({
 
   const posts = result.data.allMdx.edges;
 
-  const postPerPage = 5;
+  const postPerPage = 2;
   const numPages = Math.ceil(posts.length / postPerPage);
 
   Array.from({ length: numPages }).forEach((_, index) => {

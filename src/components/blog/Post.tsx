@@ -11,68 +11,87 @@ interface Props {
 }
 
 const PostStyles = styled.article`
-  padding: 1rem 0;
-  width: 80%;
-  ${handleFlex("row", "flex-start", "flex-start")};
-
-  &:not(:first-child) {
-    margin: 2rem 0;
-  }
   position: relative;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.text};
-`;
-
-const PostHeader = styled(Link)`
-  ${handleFlex("column", "flex-start", "flex-start")};
+  ${handleFlex("column", "center", "center")};
+  margin: 2rem;
+  h2,
   strong,
   p {
-    margin: 0.5rem;
-    padding: 0.3rem;
+    margin-left: 1rem;
+    padding: 0.3rem 0;
   }
+
   strong {
+    color: #fff;
     background: ${props => props.theme.colors.button};
-    color: #3e3e3e;
     border-radius: 4px;
-    box-shadow: ${({ theme }) => theme.shadow.elevations[2]};
+    box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
+    padding: 0.5rem;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 2px #333;
   }
-  p {
-    flex: 1;
+
+  h2 {
+    transition: ${props => props.theme.transition.mainTransition};
+    position: relative;
+    &:after {
+      content: "";
+      transition: ${props => props.theme.transition.mainTransition};
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 0;
+      background: ${({ theme: { colors } }) => colors.text};
+    }
+    &:hover {
+      &:after {
+        padding: 0.1rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+    }
   }
 `;
 
 const Tags = styled.ul`
-  ${handleFlex("row", "space-between", "center")};
-  position: absolute;
-  right: 0;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
+  border-radius: 4px;
+  padding: 1rem;
   li {
+    margin: 0 0.4rem;
+  }
+  a {
+    transition: ${props => props.theme.transition.mainTransition};
+    background: ${props => props.theme.colors.text};
     border-radius: 4px;
-    padding: 0 0.2em;
-    margin: 0 0.2em;
-    box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
-    a {
-      text-shadow: 1px 2px 2px ${({ theme }) => theme.colors.text};
-      color: ${({ theme }) => theme.colors.button};
-      display: block;
+    padding: 0.2rem 0.3rem;
+    color: ${props => props.theme.colors.background};
+    border-radius: 4px;
+    box-shadow: ${({ theme }) => theme.shadow.elevations[3]};
+
+    &:hover {
+      box-shadow: ${({ theme }) => theme.shadow.elevations[4]};
     }
   }
-  ${below.small`
-    margin-right: auto;
-  `}
 `;
-
 const Post = ({ postData }: Props) => {
   const { title, date, spoiler, tags, path } = postData.frontmatter;
 
   return (
     <PostStyles>
-      <PostHeader to={`/posts${path}`}>
-        <strong>postad at {date} </strong> <p>{spoiler}</p>
-      </PostHeader>
+      <Link to={`/posts${path}`}>
+        <h2>{title}</h2>
+      </Link>
+      <strong>written {date} </strong>
+      <p>{spoiler}</p>
       <Tags>
         {tags.map(tag => (
           <li key={tag}>
-            <Link to={`/keyword/${tag}`}>{tag}</Link>
+            <Link to={`/tags/${tag}`}>{tag}</Link>
           </li>
         ))}
       </Tags>

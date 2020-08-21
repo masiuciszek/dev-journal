@@ -5,6 +5,7 @@ import SiteProvider from "../context/site/SiteProvider";
 import styled from "styled-components";
 import Post from "../components/blog/Post";
 import { Page } from "../components/styled/Page";
+import PostListNavigation from "../components/post_list_navigation";
 
 interface Edges {
   node: {
@@ -19,12 +20,12 @@ interface Posts {
 }
 
 const PostList = styled.section`
-  padding: 1rem;
+  /* padding: 1rem;
   box-shadow: ${({ theme }) => theme.shadow.elevations[1]};
   height: 100%;
 
   .navigation {
-  }
+  } */
 `;
 
 interface PageContextData {
@@ -40,16 +41,16 @@ const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
 }) => {
   const { edges } = data.POSTS;
   const { currentPage, numPages } = pageContext;
+
+  console.log("currentPage", currentPage, " numpage ", numPages);
   return (
     <SiteProvider>
       <Layout>
         <Page>
-          <PostList>
-            {edges.map(({ node }) => (
-              <Post key={node.frontmatter.date} postData={node} />
-            ))}
-            <div className="navigation"></div>
-          </PostList>
+          {edges.map(({ node }) => (
+            <Post key={node.frontmatter.date} postData={node} />
+          ))}
+          <PostListNavigation currentPage={currentPage} numPages={numPages} />
         </Page>
       </Layout>
     </SiteProvider>

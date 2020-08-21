@@ -84,7 +84,6 @@ const Main = styled.main`
 `;
 
 const Layout: React.FC<Props> = ({ children, title }) => {
-  // TODO: CHECK IT OUT
   const { theme } = useSiteState();
 
   return (
