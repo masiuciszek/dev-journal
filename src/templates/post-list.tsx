@@ -19,15 +19,6 @@ interface Posts {
   };
 }
 
-const PostList = styled.section`
-  /* padding: 1rem;
-  box-shadow: ${({ theme }) => theme.shadow.elevations[1]};
-  height: 100%;
-
-  .navigation {
-  } */
-`;
-
 interface PageContextData {
   limit: number;
   skip: number;
@@ -48,7 +39,7 @@ const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
       <Layout>
         <Page>
           {edges.map(({ node }) => (
-            <Post key={node.frontmatter.date} postData={node} />
+            <Post key={node.frontmatter.title} postData={node} />
           ))}
           <PostListNavigation currentPage={currentPage} numPages={numPages} />
         </Page>
