@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import SiteProvider from "../context/site/SiteProvider";
-import styled from "styled-components";
 import Post from "../components/blog/Post";
 import { Page } from "../components/styled/Page";
 import PostListNavigation from "../components/post_list_navigation";
@@ -33,7 +32,6 @@ const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
   const { edges } = data.POSTS;
   const { currentPage, numPages } = pageContext;
 
-  console.log("currentPage", currentPage, " numpage ", numPages);
   return (
     <SiteProvider>
       <Layout>

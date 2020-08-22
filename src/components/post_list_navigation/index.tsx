@@ -1,7 +1,7 @@
-import { Link } from "gatsby";
 import * as React from "react";
 import styled from "styled-components";
 import { handleFlex } from "../../utils/helpers";
+import { PrevNextLink } from "../styled/Page";
 
 interface Props {
   numPages: number;
@@ -13,20 +13,6 @@ const NavigationTab = styled.section`
   box-shadow: ${props => props.theme.shadow.elevations[3]};
   margin: 4rem 0 2rem 0;
   padding: 1rem;
-`;
-
-const PrevNextLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.background};
-  background: ${({ theme }) => theme.colors.text};
-  padding: 0.5rem;
-  border-radius: 4px;
-  box-shadow: ${props => props.theme.shadow.elevations[4]};
-  display: block;
-  transition: ${({ theme }) => theme.transition.quickTransition};
-  &:hover {
-    color: #333;
-    background: ${({ theme }) => theme.colors.button};
-  }
 `;
 
 const InsideLink = styled(PrevNextLink)`
