@@ -1,4 +1,49 @@
 const path = require("path");
+/**
+ *
+ * @param {Function} createPage
+ * @param {Array} posts
+ */
+const createTagPages = (createPage, posts) => {
+  const allTagIndexTemplate = path.resolve("src/templates/allTags.tsx");
+  const singleTagIndexTemplate = path.resolve("src/templates/singleTag.tsx");
+
+  const postsByTag = {};
+
+  posts.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (!postsByTag[tag]) {
+          postsByTag[tag] = [];
+        }
+
+        postsByTag[tag].push(node);
+      });
+    }
+  });
+
+  const tags = Object.keys(postsByTag);
+  createPage({
+    path: "/tags",
+    component: allTagIndexTemplate,
+    context: {
+      tags: tags.sort(),
+    },
+  });
+
+  tags.forEach(tag => {
+    const posts = postsByTag[tag];
+    createPage({
+      path: `/tags/${tag}`,
+      component: singleTagIndexTemplate,
+      context: {
+        posts,
+        tag,
+      },
+    });
+  });
+};
+
 exports.createPages = async ({
   graphql,
   actions: { createPage },
@@ -39,6 +84,8 @@ exports.createPages = async ({
 
   const postPerPage = 2;
   const numPages = Math.ceil(posts.length / postPerPage);
+
+  createTagPages(createPage, posts);
 
   Array.from({ length: numPages }).forEach((_, index) => {
     createPage({

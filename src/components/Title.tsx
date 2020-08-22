@@ -9,6 +9,7 @@ interface Props {
   ctaText?: string;
   cta?: boolean;
   className: string;
+  center?: boolean;
 }
 
 const StyledLink = styled(Link)`
@@ -36,11 +37,11 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Title = ({ title, text, cta, ctaText, className }: Props) => {
+const Title = ({ title, text, cta, ctaText, className, center }: Props) => {
   return (
     <section className={className}>
       <h1>{title}</h1>
-      <p>{text}</p>
+      {text && <p>{text}</p>}
       {cta && <StyledLink to={`/${ctaText}`}>{ctaText}</StyledLink>}
     </section>
   );
@@ -49,6 +50,8 @@ const Title = ({ title, text, cta, ctaText, className }: Props) => {
 export default styled(Title)`
   ${handleFlex("column", "center", "flex-start")}
   padding: 1em;
+  margin: ${({ center }) => (center ? "0 auto" : "0")};
+  width: ${({ center }) => (center ? "20em" : "100%")};
   h1,
   p {
     text-shadow: 1px 1px 1px #333;
