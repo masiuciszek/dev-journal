@@ -45,7 +45,7 @@ export const PostHead = styled.section`
 
 export const PostNavigation = styled.div`
   ${handleFlex("row", "space-around", "center")}
-  margin: 2rem auto 1rem auto;
+  margin: 3rem auto 2rem auto;
   width: 100%;
   ${above.medium`
       width: 80%;
