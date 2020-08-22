@@ -5,6 +5,7 @@ import SiteProvider from "../context/site/SiteProvider";
 import Post from "../components/blog/Post";
 import { Page } from "../components/styled/Page";
 import PostListNavigation from "../components/post_list_navigation";
+import createTags from "../utils/createTags";
 
 interface Edges {
   node: {
@@ -31,6 +32,12 @@ const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
 }) => {
   const { edges } = data.POSTS;
   const { currentPage, numPages } = pageContext;
+
+  const tagsList = createTags(edges);
+
+  // console.log("tagsList ", tagsList);
+  // TODO: fix the tag navigation
+  console.log("tagsList ", Object.values(tagsList));
 
   return (
     <SiteProvider>
