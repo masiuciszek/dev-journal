@@ -51,7 +51,10 @@ export default styled(Title)`
   ${handleFlex("column", "center", "flex-start")}
   padding: 1em;
   margin: ${({ center }) => (center ? "0 auto" : "0")};
-  width: ${({ center }) => (center ? "20em" : "100%")};
+  text-align: ${({ center }) => (center ? "center" : "")};
+  ${({ center }) =>
+    center ? `justify-content: center; align-items:center;` : ""};
+
   h1,
   p {
     text-shadow: 1px 1px 1px #333;

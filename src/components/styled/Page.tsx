@@ -65,3 +65,22 @@ export const PrevNextLink = styled(Link)`
     background: ${({ theme }) => theme.colors.button};
   }
 `;
+
+export const TagsList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  margin: 2rem auto;
+  li {
+    background: ${props => props.theme.colors.text};
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 4px;
+    ${({ theme }) => theme.shadow.elevations[3]};
+  }
+  a {
+    font-size: 2em;
+    display: block;
+    color: ${props => props.theme.colors.background};
+  }
+`;

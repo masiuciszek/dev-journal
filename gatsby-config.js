@@ -9,8 +9,8 @@ module.exports = {
     twitterUsername: "@CiszekMarcell",
     sitePaths: [
       {
-        name: "about",
-        path: "/about",
+        name: "tags",
+        path: "/tags",
       },
       {
         name: "posts",
