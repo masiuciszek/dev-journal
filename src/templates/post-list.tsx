@@ -5,6 +5,8 @@ import SiteProvider from "../context/site/SiteProvider";
 import Post from "../components/blog/Post";
 import { Page } from "../components/styled/Page";
 import PostListNavigation from "../components/post_list_navigation";
+import TagsNavigation from "../components/tags_navigation";
+import Title from "../components/Title";
 
 interface Edges {
   node: {
@@ -23,6 +25,7 @@ interface PageContextData {
   skip: number;
   numPages: number;
   currentPage: number;
+  tags: string[];
 }
 
 const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
@@ -30,12 +33,14 @@ const PostListTemplate: React.FC<PageProps<Posts, PageContextData>> = ({
   pageContext,
 }) => {
   const { edges } = data.POSTS;
-  const { currentPage, numPages } = pageContext;
+  const { currentPage, numPages, tags } = pageContext;
 
   return (
     <SiteProvider>
       <Layout>
         <Page>
+          <Title className="post-list-title" title="Posts" center />
+          <TagsNavigation tags={tags} istitle />
           {edges.map(({ node }) => (
             <Post key={node.frontmatter.title} postData={node} />
           ))}

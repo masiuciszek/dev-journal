@@ -1,13 +1,6 @@
 const path = require("path");
-/**
- *
- * @param {Function} createPage
- * @param {Array} posts
- */
-const createTagPages = (createPage, posts) => {
-  const allTagIndexTemplate = path.resolve("src/templates/all-tags.tsx");
-  const singleTagIndexTemplate = path.resolve("src/templates/single-tag.tsx");
 
+function handleTags(posts) {
   const postsByTag = {};
 
   posts.forEach(({ node }) => {
@@ -21,8 +14,21 @@ const createTagPages = (createPage, posts) => {
       });
     }
   });
-
   const tags = Object.keys(postsByTag);
+  return { postsByTag, tags };
+}
+
+/**
+ *
+ * @param {Function} createPage
+ * @param {Array} posts
+ */
+const createTagPages = (createPage, posts) => {
+  const allTagIndexTemplate = path.resolve("src/templates/all-tags.tsx");
+  const singleTagIndexTemplate = path.resolve("src/templates/single-tag.tsx");
+
+  let { postsByTag, tags } = handleTags(posts);
+
   createPage({
     path: "/tags",
     component: allTagIndexTemplate,
@@ -87,6 +93,8 @@ exports.createPages = async ({
 
   createTagPages(createPage, posts);
 
+  const { tags } = handleTags(posts);
+
   Array.from({ length: numPages }).forEach((_, index) => {
     createPage({
       path: index === 0 ? `/posts` : `/posts/${index + 1}`,
@@ -96,6 +104,7 @@ exports.createPages = async ({
         skip: index * numPages,
         numPages,
         currentPage: index + 1,
+        tags,
       },
     });
   });

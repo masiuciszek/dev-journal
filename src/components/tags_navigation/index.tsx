@@ -1,28 +1,34 @@
+import { Link } from "gatsby";
 import React from "react";
-import createTags from "../../utils/createTags";
-
-interface Edges {
-  node: {
-    frontmatter: FrontMatter;
-  };
-}
-
-type EdgeList = Array<Edges>;
+import { TagsList } from "../styled/Page";
+import styled from "styled-components";
 
 interface Props {
-  edges: EdgeList;
+  tags: string[];
+  istitle?: boolean;
 }
 
-const TagsNavigation = ({ edges }: Props) => {
-  const tagsList = Object.keys(createTags(edges));
+const TagNavWrapper = styled.div`
+  .tagnav-wrappper-title {
+    text-align: center;
+    padding: 0.5rem 0 2rem 0;
+  }
+`;
 
-  console.log("tagsList ", tagsList);
-  // TODO: fix the tag navigation
-  // console.log("tagsList ", Object.values(tagsList));
+const TagsNavigation = ({ tags, istitle }: Props) => {
   return (
-    <div>
-      <h1>TagsList</h1>
-    </div>
+    <TagNavWrapper>
+      {istitle && (
+        <h3 className="tagnav-wrappper-title">Filter post by category</h3>
+      )}
+      <TagsList>
+        {tags.map(tag => (
+          <li key={tag}>
+            <Link to={`/tags/${tag}`}>{tag}</Link>
+          </li>
+        ))}
+      </TagsList>
+    </TagNavWrapper>
   );
 };
 
