@@ -5,8 +5,8 @@ const path = require("path");
  * @param {Array} posts
  */
 const createTagPages = (createPage, posts) => {
-  const allTagIndexTemplate = path.resolve("src/templates/allTags.tsx");
-  const singleTagIndexTemplate = path.resolve("src/templates/singleTag.tsx");
+  const allTagIndexTemplate = path.resolve("src/templates/all-tags.tsx");
+  const singleTagIndexTemplate = path.resolve("src/templates/single-tag.tsx");
 
   const postsByTag = {};
 

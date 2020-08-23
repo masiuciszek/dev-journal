@@ -1,8 +1,3 @@
-import React from "react";
-// import Layout from "./src/components/layout";
-// ES5 way
-// exports.onClientEntry = () => {
-// ES6 way
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
   if (!(`IntersectionObserver` in window)) {
@@ -11,4 +6,12 @@ export const onClientEntry = () => {
   }
 };
 
-// export const wrapRootElement = ({ element }) => <Layout>{element}</Layout>;
+export const onServiceWorkerUpdateReady = () => {
+  const answer = window.confirm(
+    `This application has been updated. ` +
+      `Reload to display the latest version?`
+  );
+  if (answer === true) {
+    window.location.reload();
+  }
+};

@@ -5,7 +5,7 @@ import SiteProvider from "../context/site/SiteProvider";
 const ContactPage = () => {
   return (
     <SiteProvider>
-      <Layout>
+      <Layout title="Contact">
         <h1>Contact</h1>
       </Layout>
     </SiteProvider>

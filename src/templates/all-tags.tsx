@@ -15,7 +15,7 @@ const AllTagsTemplate: React.FC<PageProps<{}, PageContext>> = ({
 }) => {
   return (
     <SiteProvider>
-      <Layout>
+      <Layout title="categories">
         <Page>
           <Title className="Tags-list-title" title="Category list" center />
           <TagsList>

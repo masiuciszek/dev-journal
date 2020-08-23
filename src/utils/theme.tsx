@@ -7,7 +7,7 @@ export const theme: DefaultTheme = {
     text: "#131313",
     button: "#ffda80",
     secondary: "#9d9d9d",
-    rgbaDark: "rgba(0,0,0,0.6)",
+    rgbaDark: "rgba(0,0,0,0.7)",
     rgbaLight: "rgba(255,255,255,0.6)",
   },
   size: {
@@ -47,7 +47,7 @@ export const themeDark: DefaultTheme = {
     text: "#fff",
     button: "#ffda80",
     secondary: "#9d9d9d",
-    rgbaDark: "rgba(0,0,0,0.6)",
+    rgbaDark: "rgba(250,250,250,0.8)",
     rgbaLight: "rgba(255,255,255,0.6)",
   },
   size: {

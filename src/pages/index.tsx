@@ -7,7 +7,7 @@ import SiteProvider from "../context/site/SiteProvider";
 const IndexPage = () => {
   return (
     <SiteProvider>
-      <Layout>
+      <Layout title="Welcome">
         <Hero className="Home-Hero">
           <Title
             className="Home-Title"

@@ -50,11 +50,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-mdx`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `my-story`,
+        short_name: `story`,
         start_url: `/`,
         background_color: `#323232`,
         theme_color: `#323233`,
