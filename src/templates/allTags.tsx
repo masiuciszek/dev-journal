@@ -17,7 +17,7 @@ const AllTagsTemplate: React.FC<PageProps<{}, PageContext>> = ({
     <SiteProvider>
       <Layout>
         <Page>
-          <Title className="TagsList-title" title="Tags list" center />
+          <Title className="Tags-list-title" title="Category list" center />
           <TagsList>
             {pageContext.tags.map(tag => (
               <li key={tag}>
