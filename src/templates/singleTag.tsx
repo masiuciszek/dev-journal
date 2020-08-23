@@ -31,10 +31,14 @@ const PostList = styled(TagsList)`
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    margin: 1rem 0;
+    background: transparent;
+    border-bottom: 3px solid ${({ theme }) => theme.colors.text};
   }
   p {
     color: ${props => props.theme.colors.background};
     font-size: 0.8em;
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
 

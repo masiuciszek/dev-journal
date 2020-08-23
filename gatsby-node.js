@@ -82,7 +82,7 @@ exports.createPages = async ({
 
   const posts = result.data.allMdx.edges;
 
-  const postPerPage = 2;
+  const postPerPage = 4;
   const numPages = Math.ceil(posts.length / postPerPage);
 
   createTagPages(createPage, posts);

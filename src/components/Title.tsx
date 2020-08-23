@@ -58,7 +58,8 @@ export default styled(Title)`
   h1,
   p {
     text-shadow: 1px 1px 1px #333;
-    padding: 0.3rem;
+    padding: ${({ center }) => (center ? "1rem" : "0.3rem")};
+    text-align: center;
     background: ${props => props.theme.colors.button};
     border-radius: 4px;
     ${({ theme }) => theme.shadow.elevations[1]};

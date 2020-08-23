@@ -9,7 +9,7 @@ module.exports = {
     twitterUsername: "@CiszekMarcell",
     sitePaths: [
       {
-        name: "tags",
+        name: "categories",
         path: "/tags",
       },
       {
