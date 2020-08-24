@@ -60,14 +60,17 @@ exports.createPages = async ({
 
   const result = await graphql(`
     {
-      allMdx(sort: { order: ASC, fields: [frontmatter___date] }, limit: 10000) {
+      allMdx(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 10000
+      ) {
         edges {
           node {
             frontmatter {
               title
               tags
               path
-              date(formatString: "MMMM DD, YY")
+              date(formatString: "dddd, MMMM Do YYYY")
               spoiler
             }
             excerpt
@@ -85,7 +88,7 @@ exports.createPages = async ({
 
   const posts = result.data.allMdx.edges;
 
-  const postPerPage = 4;
+  const postPerPage = 3;
   const numPages = Math.ceil(posts.length / postPerPage);
 
   createTagPages(createPage, posts);

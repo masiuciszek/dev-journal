@@ -23,10 +23,18 @@ interface Node {
   body: string;
   postPath: string;
 }
+
+interface PrevNextData {
+  id: string;
+  excerpt: string;
+  body: string;
+  frontmatter: FrontMatter;
+}
+
 interface PageContextData {
   postPath: string;
-  prev: null | Node;
-  next: null | Node;
+  prev?: PrevNextData;
+  next?: PrevNextData;
 }
 
 const PostItemTemplate: React.FC<PageProps<Data, PageContextData>> = ({
@@ -38,12 +46,10 @@ const PostItemTemplate: React.FC<PageProps<Data, PageContextData>> = ({
     body,
   } = data.SinglePost;
 
-  const { next: prev, prev: next, postPath } = pageContext;
+  const { next, prev, postPath } = pageContext;
 
-  const isPrev = prev === null;
-  const isNext = next === null;
-
-  console.log(isPrev, isNext);
+  console.log("next :>> ", next?.frontmatter.title);
+  console.log("prev :>> ", prev?.frontmatter.title);
 
   return (
     <SiteProvider>
@@ -60,19 +66,17 @@ const PostItemTemplate: React.FC<PageProps<Data, PageContextData>> = ({
           <MDXRenderer>{body}</MDXRenderer>
 
           <PostNavigation>
-            {/* NEXT */}
-            {prev && (
-              <PrevNextLink to={`/posts${prev.frontmatter.path}`}>
-                {" "}
-                {prev.frontmatter.title}{" "}
+            {next && (
+              <PrevNextLink to={`/posts${next.frontmatter.path}`}>
+                {next.frontmatter.title}
+                {/* Prev */}
               </PrevNextLink>
             )}
 
-            {/* PREV */}
-            {next && (
-              <PrevNextLink to={`/posts${next.frontmatter.path}`}>
-                {" "}
-                {next.frontmatter.title}{" "}
+            {prev && (
+              <PrevNextLink to={`/posts${prev.frontmatter.path}`}>
+                {prev.frontmatter.title}
+                {/* Next */}
               </PrevNextLink>
             )}
           </PostNavigation>

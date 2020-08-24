@@ -41,7 +41,10 @@ const PostListNavigation = ({ numPages, currentPage }: Props) => {
   return (
     <NavigationTab className="navigation">
       {!isFirst && (
-        <PrevNextLink to={`/posts/${prevPage}`}> ← Prev </PrevNextLink>
+        <PrevNextLink to={`/posts/${prevPage}`} rel="prev">
+          {" "}
+          ← Prev{" "}
+        </PrevNextLink>
       )}
       {Array.from({ length: numPages }, (_, i) => (
         <li key={i + 1}>
@@ -54,7 +57,10 @@ const PostListNavigation = ({ numPages, currentPage }: Props) => {
         </li>
       ))}
       {!isLast && (
-        <PrevNextLink to={`/posts/${nextPage}`}> Next → </PrevNextLink>
+        <PrevNextLink to={`/posts/${nextPage}`} rel="next">
+          {" "}
+          Next →{" "}
+        </PrevNextLink>
       )}
     </NavigationTab>
   );

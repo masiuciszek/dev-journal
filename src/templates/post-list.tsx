@@ -62,7 +62,7 @@ export const PAGE_QUERY = graphql`
         node {
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "dddd, MMMM Do YYYY")
             path
             spoiler
             tags
