@@ -60,10 +60,7 @@ exports.createPages = async ({
 
   const result = await graphql(`
     {
-      allMdx(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 10000
-      ) {
+      allMdx(sort: { order: ASC, fields: [frontmatter___date] }, limit: 10000) {
         edges {
           node {
             frontmatter {
