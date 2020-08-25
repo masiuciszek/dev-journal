@@ -1,0 +1,64 @@
+---
+title: Day Seven
+path: /day-seven
+tags: ["react", "jest"]
+spoiler: Testdriven development 🃏λ
+date: 2020-08-25
+---
+
+# Learning new concepts and new terms
+
+Today I learend a really powerful way of how to make writing test into one of your best friend to build a successfull application.
+I was supose to build a new feature today. My collegue gave me a sugeston to write the test before you build your component.
+... Wait what ? How can I test something that you haven't built yet?
+This is called _test driven development_ and is a really powerful way of writing software.
+With help of _TDD_ you will get a better perspective what fucntionality the component should have and also make it easier for you as a developer both to write the component but also for testing it.
+
+Yes of course you cant test anything that don't exists, but waht you do is that you write sudo tests on how you expect it to look.
+
+**for example**
+
+```tsx
+import React from "react";
+import { render, cleanup, fireEvent } from "@testing-library/react";
+import TestEvents from "./TestEvents";
+
+afterEach(cleanup);
+describe("<Counter />", () => {
+  test("increments counter", () => {
+    const { getByTestId } = render(<TestEvents />);
+
+    fireEvent.click(getByTestId("button-up"));
+
+    expect(getByTestId("counter")).toHaveTextContent("1");
+  });
+
+  test("decrements counter", () => {
+    const { getByTestId } = render(<TestEvents />);
+
+    fireEvent.click(getByTestId("button-down"));
+
+    expect(getByTestId("counter")).toHaveTextContent("-1");
+  });
+});
+```
+
+If you have a simple component like a counter, there is nothing wrong write your tests before like this if you are comftable to write Unit tests.
+
+If you just want to write a more _Psedu codeish_
+
+```text
+  1. render compoenent
+  2. make the button to fire a clik event
+  3. check to se if the counter value has been changed.
+```
+
+## so what I did
+
+Trying the new concept of **TDD** and building a new component for the application, maked also a new pull request from my previous test task.
+Waiting for a code review right now to be able to move it to the next stage.
+
+## My tips for today
+
+- Try Test drive development
+- Be open to learn new things
