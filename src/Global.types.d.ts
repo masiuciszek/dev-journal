@@ -7,3 +7,5 @@ interface FrontMatter {
 }
 
 type Theme = "LIGHT" | "DARK";
+
+type SocialName = "twitter" | "github" | "instagram";

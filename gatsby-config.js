@@ -21,6 +21,27 @@ module.exports = {
         path: "/contact",
       },
     ],
+    socialList: [
+      {
+        name: "twitter",
+        acount: "https://twitter.com/CiszekMarcell",
+      },
+      {
+        name: "github",
+        acount: "https://github.com/masiuciszek",
+      },
+      {
+        name: "instagram",
+        acount: "https://instagram.com/masiuciszek",
+      },
+    ],
+    aboutData: {
+      short: "developer from Gothenburg Sweden",
+      desc:
+        "Big pasion for computers, functional programing , javascript and to learn new things. Always open minded for new things and alway trying to answer to all messages!",
+      desc2:
+        "Tank you for visiting this site and hope you can find something handful for you 🐻λ🤓",
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

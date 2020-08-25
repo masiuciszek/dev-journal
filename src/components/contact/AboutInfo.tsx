@@ -5,7 +5,13 @@ import styled from "styled-components";
 interface Props {
   on: boolean;
 }
-const StyledAbout = styled(animated.article)``;
+const StyledAbout = styled(animated.article)`
+  padding: 0.5m 1em;
+  h3 {
+    font-size: 2em;
+    border-bottom: 3px solid ${({ theme }) => theme.colors.secondary};
+  }
+`;
 
 const AboutInfo = ({ on }: Props) => {
   const { x } = useSpring({
@@ -16,7 +22,7 @@ const AboutInfo = ({ on }: Props) => {
     <StyledAbout
       style={{ transform: x.interpolate(x => `translate3d(${x * 1}%,0,0)`) }}
     >
-      <h1>AboutInfo</h1>
+      <h3>AboutInfo</h3>
     </StyledAbout>
   );
 };

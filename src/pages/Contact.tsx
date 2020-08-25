@@ -5,7 +5,7 @@ import { Page } from "../components/styled/Page";
 import Title from "../components/Title";
 import SiteProvider from "../context/site/SiteProvider";
 
-const ContactPage = () => {
+const ContactPage = (): JSX.Element => {
   return (
     <SiteProvider>
       <Layout title="Contact">
