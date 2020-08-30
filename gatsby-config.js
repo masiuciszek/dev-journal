@@ -36,11 +36,10 @@ module.exports = {
       },
     ],
     aboutData: {
-      short: "developer from Gothenburg Sweden",
-      desc:
-        "Big pasion for computers, functional programing , javascript and to learn new things. Always open minded for new things and alway trying to answer to all messages!",
+      short: "I am a developer from Gothenburg Sweden",
+      desc: "This is my journal about my first school internship",
       desc2:
-        "Tank you for visiting this site and hope you can find something handful for you 🐻λ🤓",
+        "Tank you for visiting this site and hope you can find something useful for you as well 🐻λ🤓",
     },
   },
   plugins: [

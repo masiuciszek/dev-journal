@@ -12,7 +12,7 @@ const ContactPage = (): JSX.Element => {
         <Title
           className="contact-page-title"
           title="Contact me"
-          text="If you want to get in touch"
+          text="To get in touch 🚀😎"
           center
         />
         <Page>

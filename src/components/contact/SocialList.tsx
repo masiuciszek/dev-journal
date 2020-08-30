@@ -5,6 +5,10 @@ import { useSpring, animated } from "react-spring";
 import { graphql, useStaticQuery } from "gatsby";
 import SocialItem from "./SocialItem";
 
+interface Props {
+  on: boolean;
+}
+
 const QUERY = graphql`
   {
     socialListData: site {
@@ -18,9 +22,6 @@ const QUERY = graphql`
   }
 `;
 
-interface Props {
-  on: boolean;
-}
 interface SocialItemData {
   name: SocialName;
   acount: string;
@@ -51,7 +52,7 @@ const SocialList = ({ on }: Props) => {
     <StyledSocial
       style={{ transform: x.interpolate(x => `translate3d(${x * -1}%,0,0)`) }}
     >
-      <h3>SocialList</h3>
+      <h3>Social Platforms</h3>
       {socialListData.siteMetadata.socialList.map(social => (
         <SocialItem key={social.name} onSocial={social} />
       ))}
