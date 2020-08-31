@@ -15,21 +15,21 @@ const QUERY = graphql`
       siteMetadata {
         socialList {
           name
-          acount
+          account
         }
       }
     }
   }
 `;
 
-interface SocialItemData {
+interface SocialType {
   name: SocialName;
-  acount: string;
+  account: string;
 }
 interface SocialDataQuery {
   socialListData: {
     siteMetadata: {
-      socialList: SocialItemData[];
+      socialList: SocialType[];
     };
   };
 }

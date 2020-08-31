@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `my story`,
+    title: `dev journal`,
     description: `my internship documentation`,
     author: `@ciszekmarcell`,
     titleTemplate: "%s · Marcell",
@@ -24,15 +24,15 @@ module.exports = {
     socialList: [
       {
         name: "twitter",
-        acount: "https://twitter.com/CiszekMarcell",
+        account: "https://twitter.com/CiszekMarcell",
       },
       {
         name: "github",
-        acount: "https://github.com/masiuciszek",
+        account: "https://github.com/masiuciszek",
       },
       {
         name: "instagram",
-        acount: "https://instagram.com/masiuciszek",
+        account: "https://instagram.com/masiuciszek",
       },
     ],
     aboutData: {

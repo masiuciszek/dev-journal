@@ -2,12 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 import { handleFlex } from "../../utils/helpers";
 
-interface SocialItemData {
-  name: SocialName;
-  acount: string;
-}
 interface Props {
-  onSocial: SocialItemData;
+  onSocial: SocialType;
 }
 
 const StyledSocialItem = styled.a`
@@ -38,7 +34,7 @@ const StyledSocialItem = styled.a`
 `;
 
 const SocialItem = ({ onSocial }: Props) => {
-  const { name, acount } = onSocial;
+  const { name, account } = onSocial;
   const handleSocialItem = (name: SocialName) => {
     switch (name) {
       case "github":
@@ -53,7 +49,7 @@ const SocialItem = ({ onSocial }: Props) => {
   };
 
   return (
-    <StyledSocialItem href={acount}>
+    <StyledSocialItem href={account}>
       <h1>
         {onSocial.name} <span>{handleSocialItem(name)}</span>
       </h1>

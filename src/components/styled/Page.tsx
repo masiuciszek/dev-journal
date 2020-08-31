@@ -71,7 +71,6 @@ export const TagsList = styled.ul`
   flex-flow: row wrap;
   width: 65%;
   margin: 2rem auto;
-
   li {
     background: ${props => props.theme.colors.text};
     flex: 1;

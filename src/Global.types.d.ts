@@ -9,3 +9,12 @@ interface FrontMatter {
 type Theme = "LIGHT" | "DARK";
 
 type SocialName = "twitter" | "github" | "instagram";
+
+interface SitePathType {
+  name: string;
+  path: string;
+}
+interface SocialType {
+  name: SocialName;
+  account: string;
+}

@@ -21,8 +21,7 @@ const MenuSlider: React.FC<Props> = ({
           transform: onTheme === "LIGHT" ? "translateX(4em)" : "translateX(5%)",
         }}
       >
-        {" "}
-        {onTheme === "DARK" ? "🌞" : "🌑"}{" "}
+        {onTheme === "DARK" ? "🌞" : "🌑"}
       </span>
     </label>
   );

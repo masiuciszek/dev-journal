@@ -6,6 +6,7 @@ import { useSiteState } from "../../context/site/SiteProvider";
 import { theme as themeLight, themeDark } from "../../utils/theme";
 import SEO from "../Seo";
 import Nav from "../nav";
+import Footer from "../footer";
 
 interface Props {
   title?: string;
@@ -94,6 +95,7 @@ const Layout: React.FC<Props> = ({ children, title }) => {
       <GlobalStyles />
       <Nav />
       <Main>{children}</Main>
+      <Footer className="main-footer" />
     </ThemeProvider>
   );
 };
