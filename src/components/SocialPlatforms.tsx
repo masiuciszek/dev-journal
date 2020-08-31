@@ -1,31 +1,16 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { Link } from "gatsby";
-import * as React from "react";
+import React from "react";
 import styled from "styled-components";
-import { above, handleFlex } from "../../utils/helpers";
-
-interface Path {
-  name: string;
-  path: string;
-}
-
+import { handleFlex, handleSocialItem } from "../utils/helpers";
 interface Props {
-  onSitePaths: Path[];
+  onSocialList: SocialType[];
 }
 
-interface StyledListProps {
-  onLarge?: boolean;
-  onSmall?: boolean;
-}
-
-const StyledList = styled.ul<StyledListProps>`
-  display: none;
-  flex: 2;
-  height: 5em;
+const StyledSocialPlatforms = styled.ul`
+  ${handleFlex("row", "space-between", "center")};
   li {
     padding: 1em 0.5em;
+    flex: 1;
   }
-
   a {
     text-transform: capitalize;
     padding: 0.3em;
@@ -52,21 +37,18 @@ const StyledList = styled.ul<StyledListProps>`
       }
     }
   }
-  ${above.medium`
-    ${handleFlex("row", "space-evenly", "center")};
-  `}
 `;
 
-const NavList = ({ onSitePaths }: Props) => {
+const SocialPlatforms = ({ onSocialList }: Props) => {
   return (
-    <StyledList>
-      {onSitePaths.map(({ name, path }) => (
-        <li key={name}>
-          <Link to={path}>{name}</Link>
+    <StyledSocialPlatforms>
+      {onSocialList.map(({ name, account }) => (
+        <li key={account}>
+          <a href="#">{name}</a>
         </li>
       ))}
-    </StyledList>
+    </StyledSocialPlatforms>
   );
 };
 
-export default NavList;
+export default SocialPlatforms;

@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import styled from "styled-components";
-import { above, handleFlex } from "../../utils/helpers";
+import { above, below, handleFlex } from "../../utils/helpers";
+import NavigationList from "../NavigationList";
 
 const QUERY = graphql`
   {
@@ -11,10 +12,6 @@ const QUERY = graphql`
         sitePaths {
           name
           path
-        }
-        socialList {
-          name
-          account
         }
       }
     }
@@ -30,17 +27,27 @@ interface QueryType {
     siteMetadata: {
       title: string;
       sitePaths: SitePathType[];
-      socialList: SocialType[];
     };
   };
 }
 
-const FooterTitle = styled.div``;
+const FooterTitle = styled.div`
+  text-align: center;
+  flex: 1;
+  text-align: left;
+  ${handleFlex("row", "flex-start", "center")};
+  ${below.medium`
+    text-align: center;
+  `}
+  ${below.small`
+    width: 100%;
+  `}
+`;
 
 const Footer = ({ className = "main-footer" }: Props) => {
   const {
     site: {
-      siteMetadata: { sitePaths, socialList, title },
+      siteMetadata: { sitePaths, title },
     },
   } = useStaticQuery<QueryType>(QUERY);
 
@@ -49,21 +56,15 @@ const Footer = ({ className = "main-footer" }: Props) => {
       <FooterTitle>
         <h3>{title}</h3>
       </FooterTitle>
-      <div className="bob">
-        <div className="one">
-          <h1>test</h1>
-        </div>
-        <div className="two">
-          <h1>test</h1>
-        </div>
-      </div>
+      <NavigationList onSitePaths={sitePaths} />
     </footer>
   );
 };
 export default styled(Footer)`
   ${handleFlex("column", "center", "center")};
+
   ${above.medium`
-    /* height: 7em; */
     ${handleFlex("row", "space-between", "center")};
+    height: 8em;
   `}
 `;

@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { handleFlex } from "../../utils/helpers";
+import { handleFlex, handleSocialItem } from "../../utils/helpers";
 
 interface Props {
   onSocial: SocialType;
@@ -35,18 +35,6 @@ const StyledSocialItem = styled.a`
 
 const SocialItem = ({ onSocial }: Props) => {
   const { name, account } = onSocial;
-  const handleSocialItem = (name: SocialName) => {
-    switch (name) {
-      case "github":
-        return "🐻";
-      case "instagram":
-        return "📸";
-      case "twitter":
-        return "🐧";
-      default:
-        return "🚀";
-    }
-  };
 
   return (
     <StyledSocialItem href={account}>

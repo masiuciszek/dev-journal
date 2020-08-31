@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { above, below, handleFlex } from "../../utils/helpers";
-import NavList from "./NavList";
+import NavList from "../NavList";
 import { FixedObject } from "gatsby-image";
 import Img from "gatsby-image";
 import ModalMenu from "./ModalMenu";
@@ -24,16 +24,11 @@ interface ImgIcon {
   };
 }
 
-interface Path {
-  name: string;
-  path: string;
-}
-
 interface NavQueryProps {
   NavQuery: {
     siteMetadata: {
       title: "my story";
-      sitePaths: Path[];
+      sitePaths: SitePathType[];
     };
   };
   menuIcons: {

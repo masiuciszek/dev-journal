@@ -40,6 +40,19 @@ export const above = typedKeys(size).reduce((acc, label: keyof Size) => {
   return acc;
 }, {} as StyleFnMap);
 
+export const handleSocialItem = (name: SocialName) => {
+  switch (name) {
+    case "github":
+      return "🐻";
+    case "instagram":
+      return "📸";
+    case "twitter":
+      return "🐧";
+    default:
+      return "🚀";
+  }
+};
+
 type FlexDirection = "row" | "column" | "column-reverse" | "row-reverse";
 type JustifyContent =
   | "center"
