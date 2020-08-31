@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { above, handleFlex } from "../../utils/helpers";
+import { above, below, handleFlex } from "../../utils/helpers";
 
 interface PageProps {
   height?: string;
@@ -67,20 +67,26 @@ export const PrevNextLink = styled(Link)`
 `;
 
 export const TagsList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
+  ${handleFlex("row", "center", "center")};
+  flex-flow: row wrap;
   width: 65%;
   margin: 2rem auto;
+
   li {
     background: ${props => props.theme.colors.text};
+    flex: 1;
     padding: 0.5em;
     margin: 0.5em;
     border-radius: 4px;
+    text-align: center;
     ${({ theme }) => theme.shadow.elevations[3]};
   }
   a {
+    text-align: center;
     font-size: 2em;
-    display: block;
     color: ${props => props.theme.colors.background};
   }
+  ${below.small`
+    width: 100%;
+  `}
 `;

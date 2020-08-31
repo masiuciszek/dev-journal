@@ -98,4 +98,3 @@ const Layout: React.FC<Props> = ({ children, title }) => {
   );
 };
 export default Layout;
-// <ThemeProvider theme={isDark ? themeDark : themeLight}>
