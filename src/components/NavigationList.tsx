@@ -12,8 +12,16 @@ const StyledNavigation = styled.ul`
   ${handleFlex("row", "space-between", "center")};
   padding: 1em 0.5em;
   height: 100%;
+  li {
+    a {
+      color: ${props => props.theme.colors.background};
+    }
+  }
   ${below.medium`
-    width: 30em;
+    width: 20em;
+  `}
+  ${below.small`
+    width: 100%;
   `}
 `;
 

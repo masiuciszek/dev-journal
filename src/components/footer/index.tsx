@@ -34,13 +34,18 @@ interface QueryType {
 const FooterTitle = styled.div`
   text-align: center;
   flex: 1;
-  text-align: left;
   ${handleFlex("row", "flex-start", "center")};
-  ${below.medium`
+  h3 {
+    color: ${props => props.theme.colors.background};
     text-align: center;
+  }
+  ${below.medium`
   `}
   ${below.small`
-    width: 100%;
+    h3{
+      width: 100%;
+    }
+
   `}
 `;
 
@@ -62,7 +67,7 @@ const Footer = ({ className = "main-footer" }: Props) => {
 };
 export default styled(Footer)`
   ${handleFlex("column", "center", "center")};
-
+  background: ${props => props.theme.colors.text};
   ${above.medium`
     ${handleFlex("row", "space-between", "center")};
     height: 8em;

@@ -1,7 +1,7 @@
 import React from "react";
 import ContactComponents from "../components/contact";
 import Layout from "../components/layout";
-import { Page } from "../components/styled/Page";
+import { Page, PushDown } from "../components/styled/Elements";
 import Title from "../components/Title";
 import SiteProvider from "../context/site/SiteProvider";
 
@@ -17,6 +17,7 @@ const ContactPage = (): JSX.Element => {
         />
         <Page>
           <ContactComponents />
+          <PushDown padding={3} />
         </Page>
       </Layout>
     </SiteProvider>

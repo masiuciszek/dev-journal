@@ -2,13 +2,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { above, below, handleFlex } from "../../utils/helpers";
 
-interface PageProps {
-  height?: string;
-}
-
-export const Page = styled.div<PageProps>`
-  /* ${handleFlex("row", "space-between", "center")}; */
-  /* height: ${({ height }) => (height ? height : "100%")}; */
+export const Page = styled.div`
   width: 100%;
   margin: 0 auto;
   ${above.small`
@@ -88,4 +82,14 @@ export const TagsList = styled.ul`
   ${below.small`
     width: 100%;
   `}
+`;
+
+interface PushDownProps {
+  padding?: number;
+  height?: number;
+}
+
+export const PushDown = styled.div<PushDownProps>`
+  padding: ${({ padding }) => (padding ? `${padding}rem` : "0")};
+  height: ${({ height }) => (height ? `${height}rem` : "0")};
 `;

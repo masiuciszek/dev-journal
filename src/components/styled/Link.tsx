@@ -10,7 +10,7 @@ export const HoverLink = styled(Link)`
   border-radius: 0.125em;
   &::after {
     content: "";
-    background: ${({ theme }) => theme.colors.text};
+    background: ${({ theme }) => theme.colors.background};
     width: 1%;
     position: absolute;
     bottom: 0;

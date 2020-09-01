@@ -3,7 +3,7 @@ import { Link, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import SiteProvider from "../context/site/SiteProvider";
 import Title from "../components/Title";
-import { Page, TagsList } from "../components/styled/Page";
+import { Page, TagsList } from "../components/styled/Elements";
 
 interface PageContext {
   tags: string[];

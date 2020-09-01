@@ -6,7 +6,7 @@ import {
   PostHead,
   PostNavigation,
   PrevNextLink,
-} from "../components/styled/Page";
+} from "../components/styled/Elements";
 import SiteProvider from "../context/site/SiteProvider";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 

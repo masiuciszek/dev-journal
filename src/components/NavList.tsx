@@ -19,6 +19,9 @@ const StyledList = styled.ul<StyledListProps>`
   height: 5em;
   li {
     padding: 1em 0.5em;
+    a {
+      color: ${props => props.theme.colors.background};
+    }
   }
 
   ${above.medium`

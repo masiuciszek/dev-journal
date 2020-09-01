@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import { TagsList } from "../styled/Page";
+import { TagsList } from "../styled/Elements";
 import styled from "styled-components";
 
 interface Props {

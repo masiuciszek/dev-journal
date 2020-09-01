@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SiteProvider from "../context/site/SiteProvider";
 import Title from "../components/Title";
 import styled from "styled-components";
-import { Page, TagsList } from "../components/styled/Page";
+import { Page, TagsList } from "../components/styled/Elements";
 import { handleFlex } from "../utils/helpers";
 
 type Post = {

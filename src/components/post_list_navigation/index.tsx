@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { handleFlex } from "../../utils/helpers";
-import { PrevNextLink } from "../styled/Page";
+import { PrevNextLink } from "../styled/Elements";
 
 interface Props {
   numPages: number;

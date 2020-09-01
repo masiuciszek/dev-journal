@@ -72,8 +72,8 @@ const Nav: React.FC<Props> = ({ className = "MainNav" }) => {
         <Img
           fixed={
             theme === "DARK"
-              ? light.node.childImageSharp.fixed
-              : dark.node.childImageSharp.fixed
+              ? dark.node.childImageSharp.fixed
+              : light.node.childImageSharp.fixed
           }
         />
       </div>
@@ -118,6 +118,7 @@ export default styled(Nav)`
   height: 12em;
   ${handleFlex("row", "space-between", "center")};
   position: relative;
+  background: ${props => props.theme.colors.text};
   .menuImg {
     position: absolute;
     top: 1em;
@@ -133,6 +134,7 @@ export default styled(Nav)`
     padding: 1em 0;
     h3 {
       margin-bottom: 3rem;
+      color: ${props => props.theme.colors.background};
     }
     ${above.medium`
       ${handleFlex("row", "center", "center")};
