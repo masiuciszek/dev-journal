@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Title from "../components/Title";
 import SiteProvider from "../context/site/SiteProvider";
 import styled from "styled-components";
+import { PushDown } from "../components/styled/Elements";
 
 const LinkHome = styled(Link)`
   background: ${({ theme }) => theme.colors.button};
@@ -28,6 +29,7 @@ const NotFoundPage = () => {
           center
         />
         <LinkHome to="/">Back Home 🚀</LinkHome>
+        <PushDown padding={3} />
       </Layout>
     </SiteProvider>
   );

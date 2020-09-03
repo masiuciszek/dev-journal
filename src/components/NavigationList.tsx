@@ -10,7 +10,7 @@ interface NavigationListProps {
 const StyledNavigation = styled.ul`
   flex: 1;
   ${handleFlex("row", "space-between", "center")};
-  padding: 1em 0.5em;
+  padding: 1em 2.5em;
   height: 100%;
   li {
     a {
@@ -19,6 +19,7 @@ const StyledNavigation = styled.ul`
   }
   ${below.medium`
     width: 20em;
+    padding: 1em .2em;
   `}
   ${below.small`
     width: 100%;

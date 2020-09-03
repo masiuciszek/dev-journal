@@ -6,6 +6,7 @@ import {
   PostHead,
   PostNavigation,
   PrevNextLink,
+  PushDown,
 } from "../components/styled/Elements";
 import SiteProvider from "../context/site/SiteProvider";
 import { MDXRenderer } from "gatsby-plugin-mdx";
@@ -81,6 +82,7 @@ const PostItemTemplate: React.FC<PageProps<Data, PageContextData>> = ({
             )}
           </PostNavigation>
         </PostStyles>
+        <PushDown padding={3} />
       </Layout>
     </SiteProvider>
   );

@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SiteProvider from "../context/site/SiteProvider";
 import Title from "../components/Title";
 import styled from "styled-components";
-import { Page, TagsList } from "../components/styled/Elements";
+import { Page, PushDown, TagsList } from "../components/styled/Elements";
 import { handleFlex } from "../utils/helpers";
 
 type Post = {
@@ -27,6 +27,7 @@ interface Data {
 const PostList = styled(TagsList)`
   margin: 2rem auto;
   ${handleFlex("column", "center", "center")};
+
   li {
     width: 100%;
     text-align: center;
@@ -34,6 +35,11 @@ const PostList = styled(TagsList)`
     margin: 1rem 0;
     background: transparent;
     border-bottom: 3px solid ${({ theme }) => theme.colors.text};
+    transition: ${props => props.theme.transition.quickTransition};
+    &:hover {
+      box-shadow: ${props => props.theme.shadow.elevations[2]};
+      z-index: 2;
+    }
   }
   p {
     color: ${props => props.theme.colors.background};
@@ -68,6 +74,7 @@ const SingleTagTemplate: React.FC<PageProps<Data, PageContext>> = ({
             ))}
           </PostList>
         </Page>
+        <PushDown padding={5} />
       </Layout>
     </SiteProvider>
   );
