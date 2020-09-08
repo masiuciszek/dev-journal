@@ -15,6 +15,8 @@
 * [Tools](#tools)
 * [Techs I Working With](#techs)
 * [Meetings](#meetings)
+* [What I learned](#learned)
+* [Callanges](#challanges)
 
 
 ## About <a name = "about"></a>
