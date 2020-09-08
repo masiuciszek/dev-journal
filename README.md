@@ -14,6 +14,13 @@
 * [About](#about)
 * [Getting Started](#getting_started)
 * [Tools](#tools)
+* [Techs I Working With](#techs)
+* [Meetings](#meetings)
+* [What I learned](#learned)
+* [Callanges](#challanges)
+* [Social](#social)
+* [New people](#people)
+* [Result/goal](#result)
 
 
 ## About <a name = "about"></a>
@@ -56,7 +63,7 @@ Have fun !😃
 
 End with an example of getting some data out of the system or using it for a little demo.
 
-## Tools <a name = "tools"></a>
+## Tools I built this blog with <a name = "tools"></a>
 
 * Typescript
 * Gatsby
@@ -64,3 +71,27 @@ End with an example of getting some data out of the system or using it for a lit
 * Graphql
 * MDX (instead of regular markdown, (markdown on steroids))
 * Styled-components
+
+
+## Techs I worked with in the company <a name = "techs" > </a>
+
+* React
+* Jest
+* Jenkins
+* React-testing-libray
+* Graphql
+* Git
+
+## Meetingns I have been involved in <a name = "meetings" > </a>
+
+Every day we have 2 stand ups one for the whole team in the morning 9am and the second stand-up is around 2pm but then just for the front-end team that you belongs to. It's a great opportunity to tell what you.working on , how it goes and if you possible need some extra help. You really getting a good perspective on what eery person is working on and you can always give some input or vice versa.
+
+I have also been ivolved in some bigger meetings where we have discussed tech improvments in the main application and what we should prioritize. This helped me a lot to grasp what is really going on in the application and what direction the whole team is going at. 
+
+Some other useful meetings have ben the WHY meetings, where we looking into the backlog once a week to find the most important task that we could move into the todo list. Another great oppertinouty to see how the company works and how I can be more involved in the whole work. 
+
+
+## What I learned <a name = "learned" > </a>
+
+Where should I start, I learned a lot. It is a really big difference on working on your own projects, school projects comparing to working in a really big team in a serious company. You learn how to litsen to other devlopers and how you shoudl cooperate in the best possible way. 
+Learned new React koncepts and how to think when you write code. Write code in a test covrage way, where you actually write the tests first before you write any test. This just because you will hava a much better perspective on how you component logic should look like and work.
