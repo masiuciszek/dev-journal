@@ -13,6 +13,8 @@
 * [About](#about)
 * [Getting Started](#getting_started)
 * [Tools](#tools)
+* [Techs I Working With](#techs)
+* [Meetings](#meetings)
 
 
 ## About <a name = "about"></a>
@@ -63,3 +65,17 @@ End with an example of getting some data out of the system or using it for a lit
 * Graphql
 * MDX (instead of regular markdown, (markdown on steroids))
 * Styled-components
+
+
+## Techs I worked with in the company <a name = "techs" > </a>
+
+* React
+* Jest
+* Jenkins
+* React-testing-libray
+* Graphql
+* Git
+
+## Meetingns I have been involved in <a name = "meetings" > </a>
+
+Every day we have 2 stand ups one for the whole team in the morning 9am and the second stand-up is around 2pm but then just for the front-end team that you belongs to. It's a great opportunity to tell what you.working on , how it goes and if you possible need some extra help.  
