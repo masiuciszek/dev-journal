@@ -1,14 +1,15 @@
 <p align="center">
-  <a href="https://www.marcellable.com">
+  <a href="https://marcell-dev-journal.netlify.app/">
     <img alt="superhero" src="travel.png" width="60" />
   </a>
 </p>
 
-<a href="https://marcell-dev-journal.netlify.app">
 <h1 align="center">
-  My Internship Documentation
+  <a href="https://marcell-dev-journal.netlify.app/">
+     My Internship Documentation
+  </a>
 </h1>
-</a>
+  
 ## Table of Contents
 
 * [About](#about)
@@ -26,11 +27,13 @@
 ## About <a name = "about"></a>
 
 This is my Documentation for my biggest school project. My Internship at [EtraveliGroup](https://www.etraveligroup.com/).
-I will document every day on  what I do and how it went for every day. Of course there be perhaps some steps that I will not document, that is not subtitle for this blog. Hope You think the story would be intreating and you could take something from this as well.
+I will document every day (almost every day) on  what I do and how it went for the day. Of course there be perhaps some steps that I will not document, that is not subtitle for this blog. Hope You think the story would be intreating and you could take something from this as well. I am really exited to start this journy and I know I will learn a lot and become a much better devloper thanks of this.
+Woring from home/school is not the same to really work in a company.
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+You dont' need to do this but if you want to see how I did something id could be a nie way of see how it works. For example my custom hooks of handleling localStorage and custom theme with help of Styled-components 💅🏼
 
 ### Prerequisites
 
@@ -51,6 +54,8 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ``` bash
+  git fork the <Project repo>
+  
   git clone <Project url>
 
   cd into project
@@ -61,26 +66,27 @@ Say what the step will be
 Have fun !😃
 
 
-End with an example of getting some data out of the system or using it for a little demo.
-
 ## Tools I built this blog with <a name = "tools"></a>
 
 * Typescript
-* Gatsby
-* React
-* Graphql
-* MDX (instead of regular markdown, (markdown on steroids))
-* Styled-components
+* Gatsby 🅖
+* React ⚛️
+* Graphql 📊
+* MDX (instead of regular markdown, (markdown on steroids)) M🅳🆇
+* Styled-components 💅🏼
 
 
 ## Techs I worked with in the company <a name = "techs" > </a>
 
-* React
-* Jest
-* Jenkins
-* React-testing-libray
-* Graphql
-* Git
+* [React](#react)
+* [Jest](#jest)
+* [Jenkins](#jenkins)
+* [React-testing-libray](#rtl)
+* [Graphql](#gql)
+* [Git](#git)
+
+### React <a name = "react" > </a>
+React is perhaps one of the most famous client side libraries out there.
 
 ## Meetingns I have been involved in <a name = "meetings" > </a>
 
