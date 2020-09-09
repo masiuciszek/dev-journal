@@ -16,8 +16,11 @@ But what I was working on today is that I saw some code that could be changed. I
 It is really har d to test and I dinden't know how I should solve this problem at the beginning. I dived deeper into the code base to styudy the logic of the components.
 I saw that it was using redux-form and redux-modal as dependency for trigger 2 modals.
 
-I dident see the logix why we where using Redux for this. I think this made it even more complex and it was much harder to test.
+I dident see the logig why we where using Redux for this. I think this made it even more complex and it was much harder to test.
+So we dicided that I sholud remove the redux wappers around those 2 modals. We diident need Redux in this case and logic would be much straight forward. 
+I accomplised it , removed uncessery tests and addign new test for the modals and it was so easy cpmparing to how it was before with redux. Before making a PR on my work, I also did some e2e test on it to really ceck that nothing breaks. It worked fine and Made my PR. Tomorrow I will get some comments see what people think about my code. 
 
 ## Tips of today
 
-- Read Kent C Dodds blog [blog](https://kentcdodds.com/)
+- Read code make youa much better devloper
+- cleaning the code base will help you to get a better understanding on how it works
