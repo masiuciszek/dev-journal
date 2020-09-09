@@ -96,6 +96,9 @@ I have also been ivolved in some bigger meetings where we have discussed tech im
 
 Some other useful meetings have ben the WHY meetings, where we looking into the backlog once a week to find the most important task that we could move into the todo list. Another great oppertinouty to see how the company works and how I can be more involved in the whole work. 
 
+#### Retro meeting
+Every fifth week we have a retro meeting in the team where we discuss on how it went , both posetive things and what can be improved, also som questions that we would like to be answered.
+
 
 ## What I learned <a name = "learned" > </a>
 
