@@ -1,12 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
 import AboutContent from "./AboutContent";
-
-interface Props {
-  on: boolean;
-}
+import { motion } from "framer-motion";
 
 const QUERY = graphql`
   {
@@ -34,7 +30,7 @@ interface AboutData {
   };
 }
 
-const StyledAbout = styled(animated.article)`
+const StyledAbout = styled(motion.article)`
   padding: 0.5m 1em;
   h3 {
     font-size: 2em;
@@ -43,21 +39,18 @@ const StyledAbout = styled(animated.article)`
   }
 `;
 
-const AboutInfo = ({ on }: Props) => {
+const AboutInfo = () => {
   const {
     aboutData: {
       siteMetadata: { aboutData },
     },
   } = useStaticQuery<AboutData>(QUERY);
-
-  const { x } = useSpring({
-    x: on ? 0 : 100,
-  });
-
+  const variants = {
+    closed: { x: "100%", opacity: 0 },
+    open: { x: 0, opacity: 1, transition: { delay: 0.8 } },
+  };
   return (
-    <StyledAbout
-      style={{ transform: x.interpolate(x => `translate3d(${x * 1}%,0,0)`) }}
-    >
+    <StyledAbout initial="closed" animate="open" variants={variants}>
       <h3>About</h3>
       <AboutContent aboutData={aboutData} />
     </StyledAbout>

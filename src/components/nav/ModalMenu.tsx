@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
 import * as React from "react";
-import { useSpring, animated } from "react-spring";
+import { Link } from "gatsby";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { handleFlex } from "../../utils/helpers";
 
@@ -14,7 +14,7 @@ interface Props {
   onSitePaths: Path[];
 }
 
-const MenuStyles = styled(animated.section)`
+const MenuStyles = styled(motion.ul)`
   position: fixed;
   top: 0;
   left: 0;
@@ -54,21 +54,32 @@ const MenuStyles = styled(animated.section)`
 `;
 
 const ModalMenu = ({ on, onSitePaths }: Props) => {
-  const { x, opacity } = useSpring({
-    x: on ? 0 : 100,
-    opacity: on ? 1 : 0,
-  });
+  const variants = {
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        mass: 2,
+        damping: 10,
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+        staggerDirection: -1, // -1 backwords , 1 forwards
+        when: "afterChildren", // afterChildren , beforeChildren
+      },
+    },
+    closed: { opacity: 0, x: "-100%" },
+  } as const;
+
   return (
     <MenuStyles
-      style={{
-        opacity,
-        transform: x.interpolate(x => `translate3d(${x * 1}%,0,0)`),
-      }}
+      initial="closed"
+      animate={on ? "open" : "closed"}
+      variants={variants}
     >
       {onSitePaths.map(({ name, path }) => (
-        <li key={name}>
+        <motion.li key={name} whileHover={{ scale: [1.1, 0.9, 1.2] }}>
           <Link to={path}>{name}</Link>
-        </li>
+        </motion.li>
       ))}
     </MenuStyles>
   );

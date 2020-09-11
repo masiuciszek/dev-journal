@@ -2,15 +2,11 @@ import * as React from "react";
 import AboutInfo from "./AboutInfo";
 import SocialList from "./SocialList";
 import styled from "styled-components";
-import { useSpring, animated } from "react-spring";
 import useToggle from "../../hooks/useToggle";
 import { StyledLink as Button } from "../styled/Buttons";
+import { motion } from "framer-motion";
 
-interface Props {
-  delay?: number;
-}
-
-const Grid = styled(animated.section)`
+const Grid = styled(motion.section)`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -20,7 +16,6 @@ const Grid = styled(animated.section)`
   position: relative;
   ${Button} {
     position: absolute;
-    /* bottom: 0; */
     top: -3em;
     width: 16em;
     font-size: 17px;
@@ -28,29 +23,11 @@ const Grid = styled(animated.section)`
   }
 `;
 
-const ContactComponents = ({ delay = 500 }: Props): JSX.Element => {
-  const [on, toggleOn] = useToggle();
-
-  const { opacity, y } = useSpring({
-    opacity: on ? 1 : 0,
-    y: on ? 0 : 100,
-  });
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      toggleOn();
-    }, delay);
-  }, []);
-
+const ContactComponents = (): JSX.Element => {
   return (
-    <Grid
-      style={{
-        opacity,
-        transform: y.interpolate(y => `translate3d(0,${y * 1}%,0)`),
-      }}
-    >
-      <SocialList on={on} />
-      <AboutInfo on={on} />
+    <Grid>
+      <SocialList />
+      <AboutInfo />
       <Button to="/posts">Posts</Button>
     </Grid>
   );
