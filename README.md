@@ -81,7 +81,6 @@ Have fun !😃
 * [React](#react)
 * [Jest](#jest)
 * [Jenkins](#jenkins)
-* [React-testing-libray](#rtl)
 * [Graphql](#gql)
 * [Git](#git)
 
@@ -90,12 +89,21 @@ React is perhaps one of the most famous client side libraries out there.
 React is creted by the Facebook team and has been one of the main reason that Facebook has been so succeefull witha great user experience. 
 React is used by many projects world wide. React is a open source projects that has a very large and strong community.
 
-**React is a declarative way of writing code**
+**React is a declarative way of writing programs in**
 React makes it easy and fun to create interactive UIs. Design simple views for each state in your application. React updates the state that need to be changed.
 Declarative views make your code more predictable and easier to debug.
 
 ### Jest <a name = "jest" > </a>
-Jest is a JavaScript Testing Framework with a focus on simplicity and a kind of enjoyment to write your tests. You can use Jest both on the client side and the server side to test your application. 
+Jest is a JavaScript Testing Framework with a focus on simplicity and a enjoyment to write your tests in. You can use Jest both on the client side and the server side to test your application. When writing our unit-tests for out components we where using [Kent C Dodds](https://kentcdodds.com/) library for react to test our React components, [React Testing Library](https://testing-library.com/). The two most populor libraries is *React testing library* and *enzyme* that was created by Air Bnb.
+ 
+### Jenkins <a name = "jenkins"> </a> 
+Jenkins offers a simple way to set up a continuous integration and continuous delivery environment for almost any combination of languages and source code repositories
+
+### Graphql <a name = "gql"> </a> 
+Graphql is a guery language to handle your API , both on the client side and on server side.Gives the client the power to ask for what she/he need and nothing more. This makes it a really good experience both working with as a developer and as user that using the application. Graphql also has a really powerful way of developertools that makes it really pleasant to work in.
+
+### Git <a name = "git"> </a>
+Git ! I can't imagine how a tech team would work today withoud Git. I know that back in the days Git diden't exists and that must been really a pain to handle large code bases. But Git is basiclly a version control system. It is open source , easy to learn and a really powerful tool that you just need today to be able to work in a team.
 
 ## Meetingns I have been involved in <a name = "meetings" > </a>
 
@@ -105,7 +113,7 @@ I have also been ivolved in some bigger meetings where we have discussed tech im
 
 Some other useful meetings have ben the WHY meetings, where we looking into the backlog once a week to find the most important task that we could move into the todo list. Another great oppertinouty to see how the company works and how I can be more involved in the whole work. 
 
-#### Retro meeting
+*Retro meeting*
 Every fifth week we have a retro meeting in the team where we discuss on how it went , both positive things and what can be improved, also som questions that we would like to be answered. It is a great oppertiunity to progress both as a team and idvidually. This is one of the big reason why agile work is so important in tech companies. It litstien to each individual person and make each voice count. The team moves forward and we get some results.
 
 
@@ -114,4 +122,15 @@ Every fifth week we have a retro meeting in the team where we discuss on how it 
 Where should I start, I learned a lot. It is a really big difference on working on your own projects, school projects comparing to working in a really big team in a serious company. You learn how to litsen to other devlopers and how you shoudl cooperate in the best possible way. 
 Learned new React koncepts and how to think when you write code. Write code in a test covrage way, where you actually write the tests first before you write any test. This just because you will hava a much better perspective on how you component logic should look like and work.
 
-Work in a agile way
+Working in a agile way,
+benefits of following an agile development methodology:
+
+- Transparent development process
+- Reduced software product development timeline.
+- Continuous customer/user involvement & feedback.
+- Rapid software development and delivery.
+- Easily anticipate and include changes in any developmental stage.
+
+The 2 most populor ways of handling the workflow in a team the agile way is Scrum ore Kanban. We using here a mix of both and I think is working really well!
+ 
+I becamed a much better devloper thanksot all help I got and also every comment I got for my code review. I think code reviews is a really great tool to improve the way how you think and write code.
