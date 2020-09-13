@@ -67,7 +67,7 @@ Have fun !😃
 
 ## Tools I built this blog with <a name = "tools"></a>
 
-- Typescript
+- Typescript 🆃🆂
 - Gatsby 🅖
 - React ⚛️
 - Graphql 📊
@@ -108,7 +108,7 @@ Graphql is a query language to handle your API , both on the client side and on 
 
 Git ! I can't imagine how a tech team would work today without Git. I know that back in the days Git didn't exists and that must been really a pain to handle large code bases. But Git is basically a version control system. It is open source , easy to learn and a really powerful tool that you just need today to be able to work in a team.
 
-## Meetingns I have been involved in <a name = "meetings" > </a>
+## Meetings I have been involved in <a name = "meetings" > </a>
 
 Every day we have 2 stand ups one for the whole team in the morning 9am and the second stand-up is around 2pm but then just for the front-end team that you belongs to. It's a great opportunity to tell what you.working on , how it goes and if you possible need some extra help. You really getting a good perspective on what eery person is working on and you can always give some input or vice versa.
 
@@ -118,6 +118,9 @@ Some other useful meetings have ben the WHY meetings, where we looking into the 
 
 _Retro meeting_
 Every fifth week we have a retro meeting in the team where we discuss on how it went , both positive things and what can be improved, also som questions that we would like to be answered. It is a great opportunity to progress both as a team and individually. This is one of the big reason why agile work is so important in tech companies. It listen to each individual person and make each voice count. The team moves forward and we get some results.
+
+**Friday meetings**
+Friday is always a special day, at least in Sweden 🇸🇪. It is soon weekend and everyone is on a good mode. We always have a big Friday meeting around 3 a clock , for tall the teams in the company where we talk about the current week how it went and on what we expect for the current week. Some news about the company , and then finish the day with some celebration, with cake , food and and other cool stuff.
 
 ## What I learned <a name = "learned" > </a>
 
@@ -137,5 +140,5 @@ The 2 most popular ways of handling the workflow in a team the agile way is Scru
 
 I became a much better developer thank to all help I got and also every comment I got for my code review. I think code reviews is a really great tool to improve the way how you think and write code.
 
-What I also want to take up is _Pull Requests_. I think one of the most valuable experience I got has to bee all the Pull request I done. When doing pull request you will go through a lot of comments from different developers that will criticize your code , I really learned a lot from all the developers that commented my code. I took all the feed back and changed my wy of thinking and writing my code.
-I really believe that every one should make pull request, even if you working as freelancer or still a student , you got always contribute to some open source projects. You will grow as a developer and also as a person. Don't underestimate **pull requests** 🥳.
+What I also want to take up is _Pull Requests_. I think one of the most valuable experience I got has to bee all the pull request I done. When doing pull request you will go through a lot of comments from different developers that will criticize your code , I really learned a lot from all the developers that commented my code. I took all the feed back and changed my wy of thinking and writing.
+I really believe that every one should make pull request, even if you working as freelancer or still a student , you could always contribute to some open source projects. You will grow as a developer and also as a person. Don't underestimate **pull requests** 🥳.
