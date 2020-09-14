@@ -1,0 +1,40 @@
+---
+title: Merge
+path: /merge
+tags: ["dev", "git"]
+spoiler: Another merge
+date: 2020-09-14
+---
+
+## Another merge day
+
+A great day. Adter ower noramal stand up at 9 a clock. I had to my mmachine and started to fix my PR. II got some comments and opinions from different people that I wanted to fix.
+I actullu llearend something very cool today. I am a big fan of functional programiing and really want to go into that dirrection of mmy progromin carrieer.
+I will not go into deeep on this topic because
+I feel I could write a really long blog post about this if I wanted.
+But a team memeber that also is a fan of FP showed me how I can actully take advantage of curring in React, specially in on of the situatuion that I spot on , on the code I jjust wrote and made a PR on.
+
+My job was to define a function outside the componenent that then was seended as a prop to another component. The trick was that it was usinig a custom hook property that only could be defined inside the component itself.
+By passing a extra argument would just make it harder. I would have to go into the other componenent and change a lot of logic. A lot of overhead right ?
+
+So what was the solution ??.... CURRYING !!! λ🥳⚛️😍
+
+```jsx
+const foo = val => anotherVal => {
+  fn(val, anotherVal);
+};
+```
+
+**Component**
+
+```jsx
+const Component = props => {
+  const { val } = someHoook();
+
+  return (
+    <div>
+      <h1>{props.title}</h1>
+    </div>
+  );
+};
+```
