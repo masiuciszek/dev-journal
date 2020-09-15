@@ -1,7 +1,7 @@
 ---
 title: Merge
 path: /merge
-tags: ["dev", "git"]
+tags: ["dev", "react"]
 spoiler: Another merge
 date: 2020-09-14
 ---
@@ -19,6 +19,8 @@ By passing a extra argument would just make it harder. I would have to go into t
 
 So what was the solution ??.... CURRYING !!! λ🥳⚛️😍
 
+**function outsside the component**
+
 ```jsx
 const foo = val => anotherVal => {
   fn(val, anotherVal);
@@ -34,7 +36,16 @@ const Component = props => {
   return (
     <div>
       <h1>{props.title}</h1>
+      <AnotherComponent onFoo={foo(val)} />
     </div>
   );
 };
 ```
+
+I diden't know that you can pass down the first value by callling the function while you sending it as a prop. In this way the _AnotherComponent_ will have access
+to it without passing down any extra arguments. This all thanks to the curried function!
+A really cool way of doing things, and a functional way of writing your code. If you are intresed I defenitlly recomd to read _Kyle Simpsons book_ [Function light](https://github.com/getify/Functional-Light-JS).
+
+## Tips for today
+
+- If you are stuck , ask for help, you will just learn!. 😊
