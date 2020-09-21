@@ -108,6 +108,17 @@ Graphql is a query language to handle your API , both on the client side and on 
 
 Git ! I can't imagine how a tech team would work today without Git. I know that back in the days Git didn't exists and that must been really a pain to handle large code bases. But Git is basically a version control system. It is open source , easy to learn and a really powerful tool that you just need today to be able to work in a team.
 
+**Some Git commands I used daily was:**
+
+- commit
+- push
+- pull
+- checkout (branching)
+- rebase
+- merge
+- stash
+- amend
+
 ## Meetings I have been involved in <a name = "meetings" > </a>
 
 Every day we have 2 stand ups one for the whole team in the morning 9am and the second stand-up is around 2pm but then just for the front-end team that you belongs to. It's a great opportunity to tell what you.working on , how it goes and if you possible need some extra help. You really getting a good perspective on what eery person is working on and you can always give some input or vice versa.
