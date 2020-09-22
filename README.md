@@ -116,8 +116,8 @@ Git ! I can't imagine how a tech team would work today without Git. I know that 
 - _checkout (branching)_ to checkout on a working branch , feature , work in progress, tech improvement ore checking out back into master.
 - _rebase_
 - _merge_ merge my work with master or merge with some other branch if I would new another version to sync with my code.
-- _stash_
-- _amend_
+- _stash_ to stash my current working directory. Sometimes I need too change my branch but are not ready to commit my work, then I use git stash.
+- _amend_ often use when I comited some wrong message, could be a spelling misstate for example, then I use the amend command to change that. This of course if I not pushed my work yet.
 
 ## Meetings I have been involved in <a name = "meetings" > </a>
 
