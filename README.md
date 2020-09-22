@@ -110,14 +110,14 @@ Git ! I can't imagine how a tech team would work today without Git. I know that 
 
 **Some Git commands I used daily was:**
 
-- commit
-- push
-- pull
-- checkout (branching)
-- rebase
-- merge
-- stash
-- amend
+- _commit_ for making commits and solid messages to my team mates so the know what I been working on.
+- _push_ to push my latest work, so other will have access to my code.
+- _pull_ to receive the latest version from any branch ore the master.
+- _checkout (branching)_ to checkout on a working branch , feature , work in progress, tech improvement ore checking out back into master.
+- _rebase_
+- _merge_ merge my work with master or merge with some other branch if I would new another version to sync with my code.
+- _stash_
+- _amend_
 
 ## Meetings I have been involved in <a name = "meetings" > </a>
 
