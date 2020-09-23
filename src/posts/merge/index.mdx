@@ -8,18 +8,18 @@ date: 2020-09-14
 
 ## Another merge day
 
-A great day. Adter ower noramal stand up at 9 a clock. I had to my mmachine and started to fix my PR. II got some comments and opinions from different people that I wanted to fix.
-I actullu llearend something very cool today. I am a big fan of functional programiing and really want to go into that dirrection of mmy progromin carrieer.
-I will not go into deeep on this topic because
+A great day. After ower normal stands up at 9 a clock. I had to my machine and started to fix my PR. II got some comments and opinions from different people that I wanted to fix.
+I actually learned something very cool today. I am a big fan of functional programming and really want to go into that direction of my program in a carrier.
+I will not go into deep on this topic because
 I feel I could write a really long blog post about this if I wanted.
-But a team memeber that also is a fan of FP showed me how I can actully take advantage of curring in React, specially in on of the situatuion that I spot on , on the code I jjust wrote and made a PR on.
+But a team member that also is a fan of FP showed me how I can actually take advantage of curring in React, especially in on of the situation that I spot on, on the code I just wrote and made a PR on.
 
-My job was to define a function outside the componenent that then was seended as a prop to another component. The trick was that it was usinig a custom hook property that only could be defined inside the component itself.
-By passing a extra argument would just make it harder. I would have to go into the other componenent and change a lot of logic. A lot of overhead right ?
+My job was to define a function outside the component that then was seeded as a prop to another component. The trick was that it was using a custom hook property that only could be defined inside the component itself.
+Bypassing an extra argument would just make it harder. I would have to go into the other component and change a lot of logic. A lot of overhead rights?
 
 So what was the solution ??.... CURRYING !!! λ🥳⚛️😍
 
-**function outsside the component**
+**function outside the component**
 
 ```jsx
 const foo = val => anotherVal => {
@@ -42,11 +42,11 @@ const Component = props => {
 };
 ```
 
-I diden't know that you can pass down the first value by callling the function while you sending it as a prop. In this way the _AnotherComponent_ will have access
+I didn't know that you can pass down the first value by calling the function while you sending it as a prop. In this way, the _AnotherComponent_ will have access
 to it without passing down any extra arguments. This all thanks to the curried function!
-A really cool way of doing things, and a functional way of writing your code. If you are intresed I defenitlly recomd to read _Kyle Simpsons book_ [Function light](https://github.com/getify/Functional-Light-JS).
+A really cool way of doing things, and a functional way of writing your code. If you are interested I definitely recommend reading _Kyle Simpsons book_ [Function light](https://github.com/getify/Functional-Light-JS).
 
 ## Tips for today
 
-- If you are stuck , ask for help, you will just learn!. 😊
+- If you are stuck, ask for help, you will just learn!. 😊
 - Learn FP it is a really powerful tool, at least the basics! λ🐙
