@@ -8,19 +8,19 @@ date: 2020-09-08
 
 ## Old Redux
 
-Oh Redux what I have missed you, I haven't actully worked with Redux for a long time. I think the most modern React application still use Redux in some how bit slowly migrating from redux.
-There are so many different options today and speciialy when Context Api just released ther new API with hooks , Redux was not so important to omplement.
-Graphql is also one factor , how to handle your state in your React application.
-But what I was working on today is that I saw some code that could be changed. I was rewriting some test and I spot on some code that were teting some Redux wrappers.
+Oh Redux what I have missed you, I haven't actually worked with Redux for a long time. I think the most modern React application still use Redux in somehow bit slowly migrating from redux.
+There are so many different options today and especially when Context Api just released their new API with hooks, Redux was not so important to complement.
+Graphql is also one factor, how to handle your state in your React application.
+But what I was working on today is that I saw some code that could be changed. I was rewriting some tests and I spot on some code that was testing some Redux wrappers.
 
-It is really har d to test and I dinden't know how I should solve this problem at the beginning. I dived deeper into the code base to styudy the logic of the components.
-I saw that it was using redux-form and redux-modal as dependency for trigger 2 modals.
+It is really hard to test and I didn't know how I should solve this problem at the beginning. I dived deeper into the codebase to study the logic of the components.
+I saw that it was using redux-form and redux-modal as a dependency for trigger 2 modals.
 
-I dident see the logig why we where using Redux for this. I think this made it even more complex and it was much harder to test.
-So we dicided that I sholud remove the redux wappers around those 2 modals. We diident need Redux in this case and logic would be much straight forward. 
-I accomplised it , removed uncessery tests and addign new test for the modals and it was so easy cpmparing to how it was before with redux. Before making a PR on my work, I also did some e2e test on it to really ceck that nothing breaks. It worked fine and Made my PR. Tomorrow I will get some comments see what people think about my code. 
+I didn't see the logic why we where using Redux for this. I think this made it even more complex and it was much harder to test.
+So we decided that I should remove the redux wrappers around those 2 models. We didn't need Redux in this case and logic would be much straight forward.
+I accomplished it, removed unnecessary tests and adding a new test for the modals and it was so easy compared to how it was before with redux. Before making a PR on my work, I also did some e2e test on it to really check that nothing breaks. It worked fine and Made my PR. Tomorrow I will get some comments to see what people think about my code.
 
 ## Tips of today
 
-- Read code make youa much better devloper
-- cleaning the code base will help you to get a better understanding on how it works
+- Read code make you a much better developer
+- cleaning the code base will help you to get a better understanding of how it works
