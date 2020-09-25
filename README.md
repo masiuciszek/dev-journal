@@ -81,6 +81,7 @@ Have fun !😃
 - [Jenkins](#jenkins)
 - [Graphql](#gql)
 - [Git](#git)
+- [Java](#java)
 
 ### React <a name = "react" > </a>
 
@@ -118,6 +119,11 @@ Git ! I can't imagine how a tech team would work today without Git. I know that 
 - _merge_ merge my work with master or merge with some other branch if I would new another version to sync with my code.
 - _stash_ to stash my current working directory. Sometimes I need too change my branch but are not ready to commit my work, then I use git stash.
 - _amend_ often use when I comited some wrong message, could be a spelling misstate for example, then I use the amend command to change that. This of course if I not pushed my work yet.
+
+### Java <a name = "java" > </a>
+
+Java is a compiled language , manly used for enterprise companies and has a very large community. Today it is manged by the Oracle company.
+It is a _OOP_ (Object oriented) language that focus more on encapsulate the data and to share objects with each other.
 
 ## Meetings I have been involved in <a name = "meetings" > </a>
 
