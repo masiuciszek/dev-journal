@@ -82,6 +82,7 @@ Have fun!😃
 - [Graphql](#gql)
 - [Git](#git)
 - [Java](#java)
+- [Docker](#docker)
 
 ### React <a name = "react" > </a>
 
@@ -124,6 +125,11 @@ Git! I can't imagine how a tech team would work today without Git. I know that b
 
 Java is a compiled language, mainly used for enterprise companies, and has a very large community. Today it is managed by the Oracle company.
 It is an _OOP_ (Object-oriented) language that focuses more on encapsulate the data and sharing objects with each other.
+
+### Docker <a name = "docker" > </a>
+
+Docker is a software platform for building applications based on containers — small and lightweight execution environments that make shared use of the operating system kernel but otherwise run in isolation from one another.
+Docker is very common in todays development and almost required to run a successful application.
 
 ## Meetings I have been involved in <a name = "meetings" > </a>
 
